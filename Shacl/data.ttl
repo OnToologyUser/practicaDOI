@@ -1,0 +1,59 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oscar: <http://purl.org/oscar/ontology#> .
+@prefix schema: <https://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix data: <http://example.org/data/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# =====================================================================
+# ✅ DATOS POSITIVOS (Cumplen todas las reglas)
+# =====================================================================
+
+data:Oscars1928 a schema:Event ;
+    oscar:year 1928 ;             # Ahora es un integer válido >= 1927
+    oscar:ceremonyNumber 1 .
+
+data:CharlesChaplin a schema:Person ;
+    schema:name "Charles Chaplin"^^xsd:string ;
+    dbo:religion "Atheist" ;
+    dbo:race "White" ;
+    dbo:sexualOrientation "Straight" .
+
+data:TheCircus a schema:Movie ;
+    schema:name "The Circus"^^xsd:string .
+
+data:CharacterTramp a oscar:Character ;
+    schema:name "The Tramp"^^xsd:string .
+
+data:Nomination1 a oscar:Nomination ;
+    schema:nominee data:CharlesChaplin ;
+    oscar:isNominatedforMovie data:TheCircus ;
+    oscar:isWinner "true"^^xsd:boolean .
+
+
+# =====================================================================
+# ❌ DATOS NEGATIVOS (Para forzar los fallos SHACL)
+# =====================================================================
+
+# Falla Shape 1: Le falta nominee (minCount), película es un texto en vez de URI (class), 
+# y el winner es texto en vez de boolean (datatype).
+data:BadNomination a oscar:Nomination ;
+    oscar:isNominatedforMovie "Titanic the movie" ; 
+    oscar:isWinner "Sí, ganó"^^xsd:string .
+
+# Falla Shape 2 y 3: Año es menor a 1927 (falla minInclusive) y Ceremony es 0 (falla minInclusive).
+data:BadEvent a schema:Event ;
+    oscar:year 1920 ;
+    oscar:ceremonyNumber 0 .
+
+# Falla Shape 4 y 5: Nombre vacío y religión inventada.
+data:BadPerson a schema:Person ;
+    schema:name ""^^xsd:string ;
+    dbo:religion "Jedi" ;
+    dbo:race "White" ;
+    dbo:sexualOrientation "Straight" .
+
+# Falla Shape 6: Le metemos una propiedad inventada a una clase cerrada.
+data:BadCharacter a oscar:Character ;
+    schema:name "Batman"^^xsd:string ;
+    oscar:weapon "Batarang"^^xsd:string .

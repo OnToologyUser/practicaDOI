@@ -1,0 +1,90 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oscar: <http://purl.org/oscar/ontology#> .
+@prefix schema: <https://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+# ===============================================================================================================
+# SHAPE 1: La clase Nomination debe tener una única persona, mínimo una película y un valor booleano para ganador
+# ===============================================================================================================
+oscar:NominationShape a sh:NodeShape ;
+    sh:targetClass oscar:Nomination ;
+    sh:property[
+        sh:path schema:nominee ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class schema:Person ;
+        sh:message "Error: Toda nominación debe referenciar exactamente a una persona (schema:Person)." ;
+    ] ;
+    sh:property[
+        sh:path oscar:isNominatedforMovie ;
+        sh:minCount 1 ;
+        sh:class schema:Movie ;
+        sh:message "Error: Toda nominación debe referenciar a una película de la clase schema:Movie." ;
+    ] ;
+    sh:property[
+        sh:path oscar:isWinner ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+        sh:message "Error: El valor de isWinner debe ser un único booleano (true o false)." ;
+    ] .
+
+# =================================================================================
+# SHAPE 2: El valor de year debe ser como mínimo 1927 (año de la primera ceremonia)
+# =================================================================================
+schema:EventYearShape a sh:NodeShape ;
+    sh:targetClass schema:Event ;
+    sh:property[
+        sh:path oscar:year ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1927 ;
+        sh:message "Error: El año de la ceremonia debe ser numérico y mayor o igual a 1927." ;
+    ] .
+
+# =====================================================================
+# SHAPE 3: La clase Person no puede tener nombre vacío (minLength)
+# =====================================================================
+schema:PersonNameShape a sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    sh:property[
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:message "Error: El nombre de la persona no puede estar vacío (mínimo 1 carácter)." ;
+    ] .
+
+# =======================================================================================================
+# SHAPE 4: La religión, etnia y orientación sexual no pueden salirse de esos valores predefinidos (sh:in)
+# =======================================================================================================
+schema:PersonDemographicsShape a sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    sh:property[
+        sh:path dbo:religion ;
+        sh:in ( "Na" "Roman Catholic" "Jewish" "Atheist" "Anglican/episcopalian" "Christian" "Christian Science" "Protestant" "Deist" "Lutheran" "Presbyterian" "Baptist" "Methodist" "Born-Again Christian" "Buddhist" "Sufism" "Quaker" "Agnostic" "Congregationalist" "Disciples of Christ" "Hindu" ) ;
+        sh:message "Error: La religión no coincide con los valores permitidos del dataset." ;
+    ] ;
+    sh:property[
+        sh:path dbo:race ;
+        sh:in ( "White" "Black" "Hispanic" "Asian" "Multiracial" "Middle Eastern" ) ;
+        sh:message "Error: La raza/etnia no es válida." ;
+    ] ;
+    sh:property[
+        sh:path dbo:sexualOrientation ;
+        sh:in ( "Bisexual" "Straight" "Gay" "Matter of Dispute" "Na" "Lesbian" ) ;
+        sh:message "Error: La orientación sexual no coincide con los valores permitidos." ;
+    ] .
+
+# ====================================================================================
+# SHAPE 5: La clase Character es cerrada (closed) y solo puede tener la propiedad name
+# ====================================================================================
+oscar:CharacterShape a sh:NodeShape ;
+    sh:targetClass oscar:Character ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property[
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+    ] .
