@@ -16,13 +16,11 @@ Se han implementado **6 SHACL Shapes** principales, cubriendo un amplio espectro
     *   **Tipo de Dato (`sh:datatype`):** Obliga a que la propiedad `oscar:isWinner` sea de tipo `xsd:boolean`.
 2.  **`schema:EventYearShape`:**
     *   **Rango Numérico (`sh:minInclusive`):** Asegura la integridad histórica de los datos, forzando a que la propiedad `oscar:year` sea un número entero igual o superior a 1927, año de la primera ceremonia.
-3.  **`schema:EventCeremonyShape`:**
-    *   **Rango Numérico (`sh:minInclusive`):** Valida la consistencia de los identificadores, exigiendo que `oscar:ceremonyNumber` sea 1 o mayor.
-4.  **`schema:PersonNameShape`:**
+3.  **`schema:PersonNameShape`:**
     *   **Restricción de Cadena de Texto (`sh:minLength`):** Garantiza que todos los individuos de la clase `schema:Person` tengan un nombre (`schema:name`) que no esté vacío.
-5.  **`schema:PersonDemographicsShape`:**
+4.  **`schema:PersonDemographicsShape`:**
     *   **Enumeraciones (`sh:in`):** Para los atributos demográficos como `dbo:religion`, `dbo:race` y `dbo:sexualOrientation`, se ha creado un **vocabulario controlado** a partir de los valores únicos extraídos del dataset original. Esto previene la introducción de datos sucios o erróneos.
-6.  **`oscar:CharacterShape`:**
+5.  **`oscar:CharacterShape`:**
     *   **Shape Cerrada (`sh:closed`):** Es una restricción que prohíbe añadir propiedades a la clase `oscar:Character` que no estén explícitamente definidas en la Shape (`schema:name`). Esto garantiza que la estructura de la clase se mantenga simple y no se contamine con atributos no previstos.
 
 ## 3. Estrategia de Muestreo de Datos (`data.ttl`)
