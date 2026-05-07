@@ -1,6 +1,13 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ex: <http://example.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oscar: <http://purl.org/oscar/ontology#> .
+@prefix schema: <https://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
 
 # Shape 1 - Nomination must have a person
 
@@ -46,7 +53,21 @@ ex:YearPatternShape
         sh:message "Year must have format YYYY or YYYY/YY" ;
     ] .
 
-# Shape 5 - Person name minimum length is 1
+# =====================================================================
+# SHAPE 5: Rango de Valores - Value Range (Diapositiva 46)
+# =====================================================================
+# Regla: El año de la ceremonia debe ser mayor o igual a 1927.
+schema:EventShape a sh:NodeShape ;
+    sh:targetClass schema:Event ;
+    sh:property[
+        sh:path schema:startDate ; 
+        sh:datatype xsd:integer ; # Usamos integer para poder comparar matemáticamente
+        sh:minInclusive 1927 ;
+        sh:message "Error SHAPE 1: El año de la ceremonia no puede ser anterior a 1927 (sh:minInclusive)." ;
+    ] .
+
+
+# Shape 6 - Person name minimum length is 1
 
 ex:PersonNameLengthShape
     a sh:NodeShape ;
@@ -58,7 +79,7 @@ ex:PersonNameLengthShape
     ] .
 
 
-# Shape 6 - winner max count is 1
+# Shape 7 - winner max count is 1
 
 ex:WinnerMaxCountShape
     a sh:NodeShape ;
@@ -70,7 +91,7 @@ ex:WinnerMaxCountShape
     ] .
 
 
-# Shape 7 - film must be of class Film
+# Shape 8 - film must be of class Film
 
 ex:FilmClassShape
     a sh:NodeShape ;
@@ -81,18 +102,29 @@ ex:FilmClassShape
         sh:message "Film must belong to class Film" ;
     ] .
 
-# Shape 8 - ethnicity must be one of the following: Black, White, Asian, Hispanic
 
-ex:EthnicityShape
-    a sh:NodeShape ;
-    sh:targetClass ex:Person ;
-    sh:property [
-        sh:path ex:raceEthnicity ;
-        sh:in (
-            "White"
-            "Black"
-            "Asian"
-            "Hispanic"
-        ) ;
-        sh:message "Ethnicity must belong to the allowed vocabulary" ;
+# =====================================================================
+# SHAPE 9: Listas Cerradas / Enumeraciones - sh:in (Diapositiva 42)
+# =====================================================================
+# Regla: Acotamos la Raza, Religión y Orientación Sexual a los valores 
+# estrictos extraídos de la limpieza del dataset.
+schema:PersonShape a sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    # --- Restricción para Religión ---
+    sh:property[
+        sh:path dbo:religion ;
+        sh:in ( "Na" "Roman Catholic" "Jewish" "Atheist" "Anglican/episcopalian" "Christian" "Christian Science" "Protestant" "Deist" "Lutheran" "Presbyterian" "Baptist" "Methodist" "Born-Again Christian" "Buddhist" "Sufism" "Quaker" "Agnostic" "Congregationalist" "Disciples of Christ" "Hindu" ) ;
+        sh:message "Error SHAPE 2a: La religión introducida no pertenece al vocabulario controlado del dataset." ;
+    ] ;
+    # --- Restricción para Raza ---
+    sh:property[
+        sh:path dbo:race ;
+        sh:in ( "White" "Black" "Hispanic" "Asian" "Multiracial" "Middle Eastern" ) ;
+        sh:message "Error SHAPE 2b: La raza o etnia introducida no es válida." ;
+    ] ;
+    # --- Restricción para Orientación Sexual ---
+    sh:property[
+        sh:path dbo:sexualOrientation ;
+        sh:in ( "Bisexual" "Straight" "Gay" "Matter of Dispute" "Na" "Lesbian" ) ;
+        sh:message "Error SHAPE 2c: La orientación sexual no coincide con los valores permitidos." ;
     ] .
