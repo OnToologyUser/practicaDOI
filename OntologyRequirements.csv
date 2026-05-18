@@ -1,27 +1,27 @@
-﻿Identifier;"Competency Question /
- Natural language sentence (fact)";Answer (For Competency Questions);Status (Proposed, Accepted, Rejected, Deprecated);Comments (optional);Extracted from (provenance);Relation with other requirements (optional);Associated ontology elements (to be used after ontology  conceptualization assignment)
-1;Which films were nominated?       ;Children of a Lesser God, Hannah and Her Sisters, The Mission;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-2;Who was nominated?   ;Fernando Ghia and David Puttnam, Producers;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-3; In which ceremony was the award given?;59;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-4;What categories exist?;SHORT FILM (Live Action), ACTOR IN A LEADING ROLE, ACTRESS IN A LEADING ROLE;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-5;Which nominations occurred?;Charles Guggenheim, Werner Schumann;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-6;Who won the award? ;John G. Avildsen, Producer;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-7;Which person is associated with which film?;Francis Ford Coppola, Producer with The Godfather, Part III;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-8;In what category was the nomination?;BEST PICTURE;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-9;When was the ceremony held?;1990;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-10;Can each entity be uniquely identified?;Yes;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-11;Which external ontologies are reused?;;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-12;Can both datasets be merged? ;Yes;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-13; What is the canonical category? ;MAKEUP AND HAIRSTYLING;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-14;Are there multiple nominees?;Yes;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-15;What is the identifier of each film?;tt0099674;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-16; What is the identifier of each nominee?;nm0000338;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-17;Are there notes for nominations?;No;Rejected;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-18; Is there citation information?;No;Rejected;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-19;Is the nomination for multiple films? ;Yes;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-20;Can users query winners by year?;Yes;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-21;What awards were given in a year?;ACTOR IN A LEADING ROLE;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-22;Who won Best Actor?;Emil Jannings;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-23;Can other systems reuse the data?;Yes;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-24;Can new awards be added?;Yes;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
-25;From which dataset does the data come?;https://www.kaggle.com/datasets/unanimad/the-oscar-award;Accepted;;https://www.kaggle.com/datasets/unanimad/the-oscar-award;;
+Identifier,Competency Question / Natural language sentence (fact),Answer (For Competency Questions),Status (Proposed / Accepted / Rejected / Deprecated),Extracted from (provenance — dataset + file + column(s)),Relation with other requirements (optional),Associated ontology elements (to be used after ontology conceptualization assignment)
+1,Which films were nominated for Best Picture in the 59th ceremony?,"Children of a Lesser God; Hannah and Her Sisters; The Mission",Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: film, category, ceremony, winner","Related to CQ3, CQ7",
+2,Who was nominated for Best Picture in the 59th ceremony?,"Fernando Ghia and David Puttnam (Producers)",Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: name, category, ceremony","Related to CQ1, CQ6",
+3,In which ceremony number was the award for Best Picture given to Platoon?,59,Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: ceremony, film, category, winner","Related to CQ1, CQ2",
+4,What award categories existed in the 59th ceremony?,"SHORT FILM (Live Action); ACTOR IN A LEADING ROLE; ACTRESS IN A LEADING ROLE (among others)",Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: category, ceremony","Related to CQ17, CQ18",
+5,Which persons (name) appear as nominees in a given ceremony?,"Charles Guggenheim; Werner Schumann",Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: name, ceremony","Related to CQ2, CQ6",
+6,Who won an Oscar in a given category and ceremony?,"John G. Avildsen (Director; Best Picture)",Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: name, category, ceremony, winner (=True)","Related to CQ2, CQ5",
+7,Which person is associated with which film in a nomination record?,Francis Ford Coppola associated with The Godfather Part III,Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: name, film","Related to CQ1, CQ9",
+8,In what category was a given nomination?,BEST PICTURE,Accepted,[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | column: category,"Related to CQ4, CQ17",
+9,In what year (year_ceremony) was a given ceremony held?,"1990 (63rd ceremony)",Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: year_ceremony, ceremony","Related to CQ3, CQ18",
+10,What is the canonical (standardised) category label for a given raw category string?,"MAKEUP AND HAIRSTYLING (canonical form of historical variants like MAKEUP)",Accepted,[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | column: category,"Related to CQ4, CQ17",
+11,Are there nomination records with more than one nominee name for the same film and category?,"Yes – e.g. multiple producers listed under the same Best Picture nomination",Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: name, film, category, ceremony","Related to CQ1, CQ12",
+12,How many total nominations did a given film receive?,"14 (e.g. Titanic — 1997)",Accepted,[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: film; category (count of rows per film),"Related to CQ11, CQ13",
+13,Which films have received the most nominations in history?,"All About Eve; Titanic; La La Land (14 nominations each)",Accepted,[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: film; category (GROUP BY film COUNT),"Related to CQ12",
+14,What is the IMDb title identifier (tconst) of a film that appears in the Oscar nominations?,"tt0099674 (Goodfellas; nominated for Best Picture 1991)",Accepted,[D2] IMDb – csv/title.basics.tsv | column: tconst | linked to [D1] via film name alignment,"Related to CQ15, CQ16",
+15,What is the IMDb person identifier (nconst) of a nominee listed in the Oscar dataset?,"nm0000338 (Meryl Streep)",Accepted,[D2] IMDb – csv/name.basics.tsv | column: nconst | linked to [D1] via name alignment,"Related to CQ19, CQ22",
+16,Are there notes or annotation fields attached to individual nomination records?,No – no free-text notes column exists in the dataset,Rejected,[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv,,
+17,Is citation or bibliographic information provided within the dataset?,No – the dataset does not include citation metadata per row,Rejected,[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv,,
+18,Can one nomination record be associated with more than one film?,"Yes – rare cases where a nominee's work spans multiple films listed in a single record",Accepted,[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | column: film,"Related to CQ12, CQ11",
+19,Can users query all Oscar winners filtered by year_ceremony?,Yes,Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: winner (=True), year_ceremony","Related to CQ6, CQ9",
+20,What award categories were active in a given year_ceremony?,"ACTOR IN A LEADING ROLE (among others) — for year_ceremony = 1929",Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: category, year_ceremony","Related to CQ4, CQ21",
+21,Who won Best Actor (ACTOR IN A LEADING ROLE) at the 1st ceremony?,Emil Jannings,Accepted,"[D1] Kaggle – The Oscar Award | csv/the_oscar_award.csv | columns: name, category, ceremony, winner","Related to CQ2, CQ6",
+22,What genre(s) does IMDb assign to an Oscar-nominated film?,"Drama; War (e.g. Platoon — tt0091763)",Accepted,"[D2] IMDb – csv/title.basics.tsv | columns: tconst, genres | linked to [D1] via film name","Related to CQ14, CQ23",
+23,What is the birth year of an Oscar nominee according to IMDb?,"1907 (Katharine Hepburn — nm0001356)",Accepted,"[D2] IMDb – csv/name.basics.tsv | columns: nconst, birthYear | linked to [D1] via name","Related to CQ15, CQ24",
+24,What primaryProfession does IMDb record for an Oscar nominee?,"actress, soundtrack, producer (e.g. nm0000338)",Accepted,"[D2] IMDb – csv/name.basics.tsv | columns: nconst, primaryProfession | linked to [D1] via name",Related to CQ15,
+25,What is the original title of an Oscar-nominated film according to IMDb?,"Amour (originalTitle = Amour; language FR)",Accepted,"[D2] IMDb – csv/title.basics.tsv | columns: tconst, originalTitle, primaryTitle | linked to [D1] via film name",Related to CQ14,
+26,Does the release year in the Oscar dataset match the startYear in IMDb for the same film?,"Mostly yes, with edge cases where year_film in [D1] differs from startYear in [D2]",Accepted,"[D1] csv/the_oscar_award.csv column: year_film | [D2] csv/title.basics.tsv column: startYear | linked via tconst",Related to CQ14,

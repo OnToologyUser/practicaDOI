@@ -1,21 +1,189 @@
-Case 1 — Search Oscar winners
-
-Goal: Users want to find winners by category and year.
-
-CQ examples:
-
-Who won Best Actor in 1995?
-
-Which films won in 2001?
-
-
-
-Case 2 — Analyze nominations by film
-
-Goal: Analyze how many nominations each film received.
-
-CQ:
-
-How many nominations did Titanic receive?
-
-Which films have the most nominations?
+USE CASES FOR THE OSCAR AWARDS & IMDb ONTOLOGY
+================================================================================
+Datasets used:
+  [D1] Kaggle – The Oscar Award (1927–2026)
+       https://www.kaggle.com/datasets/unanimad/the-oscar-award
+       File: csv/the_oscar_award.csv
+       Key columns: year_film, year_ceremony, ceremony, category, name, film, winner
+ 
+  [D2] IMDb – Non-commercial datasets
+       https://datasets.imdbws.com/
+       Files: csv/title.basics.tsv, csv/name.basics.tsv
+       Key columns (titles): tconst, primaryTitle, originalTitle, startYear, genres
+       Key columns (names):  nconst, primaryName, birthYear, deathYear, primaryProfession
+ 
+================================================================================
+USE CASE 1 — Query Oscar Winners by Category and Year
+================================================================================
+ 
+Goal:
+  Users (film enthusiasts, journalists, researchers) want to retrieve award
+  winners filtered by a specific category and/or year. This is the most
+  fundamental query over the awards data and validates that nominations, wins,
+  and ceremony metadata are correctly modelled.
+ 
+Primary dataset: [D1] the_oscar_award.csv
+ 
+Competency Questions:
+  CQ1.  Which films were nominated for Best Picture in the 59th ceremony (1987)?
+        → uses: film, ceremony, category, winner=False
+        Example answer: Children of a Lesser God, Hannah and Her Sisters, The Mission
+ 
+  CQ2.  Who won Best Actor at the 1st Academy Awards ceremony?
+        → uses: name, category, winner=True, ceremony=1
+        Example answer: Emil Jannings
+ 
+  CQ3.  In which ceremony was the award for Best Picture given to The Godfather?
+        → uses: film, category, ceremony, winner=True
+        Example answer: 45th ceremony (1973)
+ 
+  CQ4.  What award categories existed in the 59th ceremony?
+        → uses: category, ceremony
+        Example answer: SHORT FILM (Live Action), ACTOR IN A LEADING ROLE, ...
+ 
+  CQ5.  Which films won at least one Oscar in the year 2001?
+        → uses: film, year_film, winner=True
+        Example answer: Gladiator, Traffic, Crouching Tiger Hidden Dragon, ...
+ 
+  CQ6.  Who were all the nominees (not just winners) in the BEST PICTURE
+        category across ceremonies 80–90?
+        → uses: name, film, category, ceremony, winner
+ 
+================================================================================
+USE CASE 2 — Analyse Nomination Counts and Patterns per Film
+================================================================================
+ 
+Goal:
+  Film industry analysts and award strategists need to understand how many
+  nominations each film received across all categories, and which films
+  historically accumulated the most nominations. This use case stresses the
+  aggregation capabilities of the ontology over the awards dataset.
+ 
+Primary dataset: [D1] the_oscar_award.csv
+ 
+Competency Questions:
+  CQ7.  How many total Oscar nominations did Titanic (1997) receive?
+        → uses: film, year_film, category  (count of rows where film = "Titanic")
+        Example answer: 14
+ 
+  CQ8.  Which ten films have received the most nominations in history?
+        → uses: film, category  (GROUP BY film, COUNT)
+        Example answer: All About Eve (14), Titanic (14), La La Land (14), ...
+ 
+  CQ9.  Did any film receive nominations in both acting and directing categories
+        in the same ceremony?
+        → uses: film, category, ceremony
+        Example answer: Yes – The Godfather (1972) nominated for Director and actors
+ 
+  CQ10. How many films were nominated but received zero wins in ceremony 95?
+        → uses: film, ceremony, winner
+        Example answer: requires counting films where all winner=False in ceremony=95
+ 
+  CQ11. In which categories was the film "Everything Everywhere All at Once"
+        nominated, and did it win each?
+        → uses: film, category, winner
+        Example answer: Best Picture ✓, Best Director ✓, Best Actress ✓, ...
+ 
+================================================================================
+USE CASE 3 — Cross-Dataset Film Lookup (Awards + IMDb Metadata)
+================================================================================
+ 
+Goal:
+  Researchers and data integrators need to enrich Oscar nomination records with
+  IMDb film metadata (genre, original title, release year) using the shared film
+  identifier (tconst). This use case validates that the ontology correctly links
+  both datasets through a common key.
+ 
+Primary datasets: [D1] the_oscar_award.csv  +  [D2] title.basics.tsv
+ 
+Competency Questions:
+  CQ12. What is the IMDb identifier (tconst) of the film associated with a
+        given Oscar nomination record?
+        → uses: film [D1] linked to tconst [D2]
+        Example answer: Platoon (1986) → tt0091763
+ 
+  CQ13. What genre(s) does IMDb assign to the Best Picture winner of
+        ceremony 59?
+        → uses: film [D1], winner=True, category="BEST PICTURE" [D1]
+                joined to genres [D2] via tconst
+        Example answer: Platoon → Drama, War
+ 
+  CQ14. What is the original (non-English) title of an Oscar-nominated film
+        whose primary IMDb title differs from the name recorded in the
+        awards dataset?
+        → uses: film [D1] joined to originalTitle [D2]
+        Example answer: "Amour" → originalTitle = "Amour" (FR)
+ 
+  CQ15. Which Oscar-nominated films were released in a different year than the
+        year recorded in the awards dataset?
+        → uses: year_film [D1] vs startYear [D2]
+        (validates date alignment between datasets)
+ 
+  CQ16. For a given tconst (e.g. tt0099674), what Oscar nominations does the
+        corresponding film have?
+        → uses: tconst [D2] joined to film [D1] via shared key
+        Example answer: tt0099674 = "Goodfellas" → nominated for Best Picture (1991)
+ 
+================================================================================
+USE CASE 4 — Cross-Dataset Person Lookup (Awards + IMDb Profiles)
+================================================================================
+ 
+Goal:
+  Casting directors, researchers, and journalists need to correlate Oscar
+  nomination data with biographical and professional information about the
+  nominated individuals stored in the IMDb names dataset. This validates the
+  person-level linking between both datasets through the nconst identifier.
+ 
+Primary datasets: [D1] the_oscar_award.csv  +  [D2] name.basics.tsv
+ 
+Competency Questions:
+  CQ17. What is the IMDb identifier (nconst) of a person nominated for an Oscar?
+        → uses: name [D1] joined to nconst [D2]
+        Example answer: Meryl Streep → nm0000658
+ 
+  CQ18. What is the primary profession listed in IMDb for a given Oscar nominee?
+        → uses: name [D1] joined to primaryProfession [D2] via nconst
+        Example answer: nm0000338 → "actress, soundtrack, producer"
+ 
+  CQ19. Which Oscar nominees in the ACTRESS IN A LEADING ROLE category were
+        born before 1940 according to IMDb?
+        → uses: name, category [D1] joined to birthYear [D2]
+        Example answer: Katharine Hepburn (born 1907), Bette Davis (born 1908)
+ 
+  CQ20. Are there individuals who appear in the Oscar dataset under a name
+        different from their primaryName in IMDb?
+        → uses: name [D1] vs primaryName [D2]  (validates name normalisation)
+ 
+  CQ21. Which Oscar winners are recorded in IMDb as having deceased before
+        receiving their award?
+        → uses: winner=True, year_ceremony [D1] vs deathYear [D2]
+        (edge case / data quality check)
+ 
+================================================================================
+USE CASE 5 — Historical Trends in Oscar Categories
+================================================================================
+ 
+Goal:
+  Film historians and ontology engineers need to understand how award categories
+  have evolved across ceremonies: when categories were introduced, renamed, or
+  discontinued. This use case validates temporal modelling of category metadata.
+ 
+Primary dataset: [D1] the_oscar_award.csv
+ 
+Competency Questions:
+  CQ22. What is the canonical (standardised) name of the category historically
+        known as "MAKEUP"?
+        → uses: category [D1]
+        Example answer: MAKEUP AND HAIRSTYLING
+ 
+  CQ23. In which ceremony was the category INTERNATIONAL FEATURE FILM first
+        awarded?
+        → uses: category, ceremony  (MIN ceremony for that category)
+        Example answer: 16th ceremony (1944), formerly FOREIGN LANGUAGE FILM
+ 
+  CQ24. Which categories appear in ceremony 1 but not in ceremony 95?
+        → uses: category, ceremony  (SET DIFFERENCE across two ceremony values)
+ 
+  CQ25. How many distinct award categories have existed across all ceremonies?
+        → uses: category  (COUNT DISTINCT)
+        Example answer: approx. 120+ distinct category strings over the full history
