@@ -1,0 +1,830 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://purl.org/oscar/ontology", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://www.w3.org/2001/XMLSchema", "http://dbpedia.org/ontology", "http://xmlns.com/foaf/0.1", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "undefined" : "Oscars Ontology"
+    },
+    "iri" : "http://purl.org/oscar/ontology#",
+    "version" : "1.0.0",
+    "author" : [ "Grupo 8" ],
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Grupo 8",
+        "type" : "label"
+      } ],
+      "createdWith" : [ {
+        "identifier" : "createdWith",
+        "language" : "undefined",
+        "value" : "https://chowlk.linkeddata.es/",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Oscars Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/oscar/ontology#State",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "State",
+      "undefined" : "State"
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#Nomination",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Nomination",
+      "undefined" : "Nomination"
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://dbpedia.org/ontology/SexualOrientation",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SexualOrientation",
+      "undefined" : "Sexual Orientation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#Category",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Category",
+      "undefined" : "Category"
+    },
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#Place",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place",
+      "undefined" : "Place"
+    },
+    "id" : "16"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "undefined" : "Person"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://schema.org/Movie",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Movie",
+      "undefined" : "Movie"
+    },
+    "attributes" : [ "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://schema.org/Event",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "undefined" : "Event"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://dbpedia.org/ontology/Race",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Race",
+      "undefined" : "Race"
+    },
+    "attributes" : [ "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#Character",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Character",
+      "undefined" : "Character"
+    },
+    "id" : "22"
+  }, {
+    "iri" : "http://dbpedia.org/ontology/Religion",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Religion",
+      "undefined" : "Religion"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://purl.org/oscar/ontology#dateOfBirth",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "dateOfBirth",
+      "undefined" : "date of birth"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#includesCategory",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "includesCategory",
+      "undefined" : "includes category"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#nomineeIds",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "nomineeIds",
+      "undefined" : "nominee ids"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#hasNominee",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasNominee",
+      "undefined" : "has nominee"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#nominationName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "nominationName",
+      "undefined" : "nomination name"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#hasReligion",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasReligion",
+      "undefined" : "has religion"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#wasBornIn",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "wasBornIn",
+      "undefined" : "was born in"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "narrower",
+      "undefined" : "narrower"
+    },
+    "domain" : "5",
+    "attributes" : [ "external", "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#movieName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "movieName",
+      "undefined" : "movie name"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#appearsIn",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "appearsIn",
+      "undefined" : "appears in"
+    },
+    "domain" : "22",
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#stateName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "stateName",
+      "undefined" : "state name"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#hasEthnicity",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasEthnicity",
+      "undefined" : "has ethnicity"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#year",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "year",
+      "undefined" : "year"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#surname",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "surname",
+      "undefined" : "surname"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#happenedAt",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "happenedAt",
+      "undefined" : "happened at"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#categoryName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "categoryName",
+      "undefined" : "category name"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#actedIn",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "actedIn",
+      "undefined" : "acted in"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#placeName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "placeName",
+      "undefined" : "place name"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#bioURL",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "bioURL",
+      "undefined" : "bio u r l"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#eventName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "eventName",
+      "undefined" : "event name"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#isMultifilm",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "isMultifilm",
+      "undefined" : "is multifilm"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#raceName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "raceName",
+      "undefined" : "race name"
+    },
+    "domain" : "27",
+    "attributes" : [ "datatype" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#religionName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "religionName",
+      "undefined" : "religion name"
+    },
+    "domain" : "14",
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#isNominatedForMovie",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "isNominatedForMovie",
+      "undefined" : "is nominated for movie"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#hasSexualOrientation",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasSexualOrientation",
+      "undefined" : "has sexual orientation"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#nomId",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "nomId",
+      "undefined" : "nom id"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#characterName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "characterName",
+      "undefined" : "character name"
+    },
+    "domain" : "22",
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#name",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "name",
+      "undefined" : "name"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#filmId",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "filmId",
+      "undefined" : "film id"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#isWinner",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "isWinner",
+      "undefined" : "is winner"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#isPartOfState",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "isPartOfState",
+      "undefined" : "is part of state"
+    },
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://purl.org/oscar/ontology#sexualOrientationName",
+    "baseIri" : "http://purl.org/oscar/ontology",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "sexualOrientationName",
+      "undefined" : "sexual orientation name"
+    },
+    "domain" : "25",
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  } ]
+}
