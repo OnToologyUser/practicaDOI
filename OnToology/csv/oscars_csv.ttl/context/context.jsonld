@@ -1,0 +1,61 @@
+{
+  "@context" : {
+    "isPrimaryTopicOf" : {
+      "@id" : "http://xmlns.com/foaf/0.1/isPrimaryTopicOf"
+    },
+    "familyName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/familyName"
+    },
+    "hasEthnicity" : {
+      "@id" : "https://w3id.org/oscars/ontology#hasEthnicity"
+    },
+    "Person" : {
+      "@id" : "null:oscar:Person"
+    },
+    "givenName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/givenName"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "Nomination" : {
+      "@id" : "https://w3id.org/oscars/ontology#Nomination"
+    },
+    "isWinner" : {
+      "@id" : "https://w3id.org/oscars/ontology#isWinner"
+    },
+    "birthPlace" : {
+      "@id" : "http://schema.org/birthPlace"
+    },
+    "nominatedPerson" : {
+      "@id" : "https://w3id.org/oscars/ontology#nominatedPerson"
+    },
+    "year" : {
+      "@id" : "https://w3id.org/oscars/ontology#year"
+    },
+    "birthDate" : {
+      "@id" : "http://schema.org/birthDate"
+    },
+    "Film" : {
+      "@id" : "https://w3id.org/oscars/ontology#Film"
+    },
+    "forFilm" : {
+      "@id" : "https://w3id.org/oscars/ontology#forFilm"
+    },
+    "hasReligion" : {
+      "@id" : "https://w3id.org/oscars/ontology#hasReligion"
+    },
+    "category" : {
+      "@id" : "https://w3id.org/oscars/ontology#category"
+    },
+    "hasSexualOrientation" : {
+      "@id" : "https://w3id.org/oscars/ontology#hasSexualOrientation"
+    },
+    "characterName" : {
+      "@id" : "https://w3id.org/oscars/ontology#characterName"
+    },
+    "nominationName" : {
+      "@id" : "https://w3id.org/oscars/ontology#nominationName"
+    }
+  }
+}

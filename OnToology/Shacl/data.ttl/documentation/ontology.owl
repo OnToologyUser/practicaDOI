@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://schema.org/"
+     xmlns:ontology="http://purl.org/oscar/ontology#"
+     xmlns:ontology1="http://dbpedia.org/ontology/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/race -->
+
+
+    <AnnotationProperty rdf:about="http://dbpedia.org/ontology/race"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/religion -->
+
+
+    <AnnotationProperty rdf:about="http://dbpedia.org/ontology/religion"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/sexualOrientation -->
+
+
+    <AnnotationProperty rdf:about="http://dbpedia.org/ontology/sexualOrientation"/>
+    
+
+
+    <!-- http://purl.org/oscar/ontology#ceremonyNumber -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/oscar/ontology#ceremonyNumber"/>
+    
+
+
+    <!-- http://purl.org/oscar/ontology#isNominatedforMovie -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/oscar/ontology#isNominatedforMovie"/>
+    
+
+
+    <!-- http://purl.org/oscar/ontology#isWinner -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/oscar/ontology#isWinner"/>
+    
+
+
+    <!-- http://purl.org/oscar/ontology#weapon -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/oscar/ontology#weapon"/>
+    
+
+
+    <!-- http://purl.org/oscar/ontology#year -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/oscar/ontology#year"/>
+    
+
+
+    <!-- https://schema.org/name -->
+
+
+    <AnnotationProperty rdf:about="https://schema.org/name"/>
+    
+
+
+    <!-- https://schema.org/nominee -->
+
+
+    <AnnotationProperty rdf:about="https://schema.org/nominee"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/oscar/ontology#Character -->
+
+
+    <Class rdf:about="http://purl.org/oscar/ontology#Character"/>
+    
+
+
+    <!-- http://purl.org/oscar/ontology#Nomination -->
+
+
+    <Class rdf:about="http://purl.org/oscar/ontology#Nomination"/>
+    
+
+
+    <!-- https://schema.org/Event -->
+
+
+    <Class rdf:about="https://schema.org/Event"/>
+    
+
+
+    <!-- https://schema.org/Movie -->
+
+
+    <Class rdf:about="https://schema.org/Movie"/>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+
+    <Class rdf:about="https://schema.org/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/data/BadCharacter -->
+
+
+    <NamedIndividual rdf:about="http://example.org/data/BadCharacter">
+        <rdf:type rdf:resource="http://purl.org/oscar/ontology#Character"/>
+        <ontology:weapon>Batarang</ontology:weapon>
+        <schema:name>Batman</schema:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/data/BadEvent -->
+
+
+    <NamedIndividual rdf:about="http://example.org/data/BadEvent">
+        <rdf:type rdf:resource="https://schema.org/Event"/>
+        <ontology:ceremonyNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ontology:ceremonyNumber>
+        <ontology:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1920</ontology:year>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/data/BadNomination -->
+
+
+    <NamedIndividual rdf:about="http://example.org/data/BadNomination">
+        <rdf:type rdf:resource="http://purl.org/oscar/ontology#Nomination"/>
+        <ontology:isNominatedforMovie>Titanic the movie</ontology:isNominatedforMovie>
+        <ontology:isWinner>Sí, ganó</ontology:isWinner>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/data/BadPerson -->
+
+
+    <NamedIndividual rdf:about="http://example.org/data/BadPerson">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <ontology1:race>White</ontology1:race>
+        <ontology1:religion>Jedi</ontology1:religion>
+        <ontology1:sexualOrientation>Straight</ontology1:sexualOrientation>
+        <schema:name></schema:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/data/CharacterTramp -->
+
+
+    <NamedIndividual rdf:about="http://example.org/data/CharacterTramp">
+        <rdf:type rdf:resource="http://purl.org/oscar/ontology#Character"/>
+        <schema:name>The Tramp</schema:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/data/CharlesChaplin -->
+
+
+    <NamedIndividual rdf:about="http://example.org/data/CharlesChaplin">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <ontology1:race>White</ontology1:race>
+        <ontology1:religion>Atheist</ontology1:religion>
+        <ontology1:sexualOrientation>Straight</ontology1:sexualOrientation>
+        <schema:name>Charles Chaplin</schema:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/data/Nomination1 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/data/Nomination1">
+        <rdf:type rdf:resource="http://purl.org/oscar/ontology#Nomination"/>
+        <ontology:isNominatedforMovie rdf:resource="http://example.org/data/TheCircus"/>
+        <ontology:isWinner rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontology:isWinner>
+        <schema:nominee rdf:resource="http://example.org/data/CharlesChaplin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/data/Oscars1928 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/data/Oscars1928">
+        <rdf:type rdf:resource="https://schema.org/Event"/>
+        <ontology:ceremonyNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:ceremonyNumber>
+        <ontology:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1928</ontology:year>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/data/TheCircus -->
+
+
+    <NamedIndividual rdf:about="http://example.org/data/TheCircus">
+        <rdf:type rdf:resource="https://schema.org/Movie"/>
+        <schema:name>The Circus</schema:name>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

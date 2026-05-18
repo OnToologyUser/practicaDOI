@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:shacl="http://www.w3.org/ns/shacl#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#class -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#class"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#closed -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#closed"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#datatype -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#datatype"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#ignoredProperties -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#ignoredProperties"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#in -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#in"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#maxCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#maxCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#message -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#message"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#minCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#minCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#minInclusive -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#minInclusive"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#minLength -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#minLength"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#path -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#path"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#property -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#targetClass -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetClass"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/oscar/ontology#CharacterShape -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/oscar/ontology#CharacterShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</shacl:closed>
+        <shacl:ignoredProperties>
+            <rdf:Description/>
+        </shacl:ignoredProperties>
+        <shacl:property rdf:nodeID="genid3"/>
+        <shacl:targetClass rdf:resource="http://purl.org/oscar/ontology#Character"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid3">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:path rdf:resource="https://schema.org/name"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/oscar/ontology#NominationShape -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/oscar/ontology#NominationShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid4"/>
+        <shacl:property rdf:nodeID="genid5"/>
+        <shacl:property rdf:nodeID="genid6"/>
+        <shacl:targetClass rdf:resource="http://purl.org/oscar/ontology#Nomination"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid4">
+        <shacl:class rdf:resource="https://schema.org/Person"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>Error: Toda nominación debe referenciar exactamente a una persona (schema:Person).</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="https://schema.org/nominee"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid5">
+        <shacl:class rdf:resource="https://schema.org/Movie"/>
+        <shacl:message>Error: Toda nominación debe referenciar a una película de la clase schema:Movie.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://purl.org/oscar/ontology#isNominatedforMovie"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>Error: El valor de isWinner debe ser un único booleano (true o false).</shacl:message>
+        <shacl:path rdf:resource="http://purl.org/oscar/ontology#isWinner"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/EventYearShape -->
+
+
+    <NamedIndividual rdf:about="https://schema.org/EventYearShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid7"/>
+        <shacl:targetClass rdf:resource="https://schema.org/Event"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid7">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:message>Error: El año de la ceremonia debe ser numérico y mayor o igual a 1927.</shacl:message>
+        <shacl:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1927</shacl:minInclusive>
+        <shacl:path rdf:resource="http://purl.org/oscar/ontology#year"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/PersonDemographicsShape -->
+
+
+    <NamedIndividual rdf:about="https://schema.org/PersonDemographicsShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid8"/>
+        <shacl:property rdf:nodeID="genid10"/>
+        <shacl:property rdf:nodeID="genid12"/>
+        <shacl:targetClass rdf:resource="https://schema.org/Person"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid8">
+        <shacl:in>
+            <rdf:Description/>
+        </shacl:in>
+        <shacl:message>Error: La orientación sexual no coincide con los valores permitidos.</shacl:message>
+        <shacl:path rdf:resource="http://dbpedia.org/ontology/sexualOrientation"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid10">
+        <shacl:in>
+            <rdf:Description/>
+        </shacl:in>
+        <shacl:message>Error: La religión no coincide con los valores permitidos del dataset.</shacl:message>
+        <shacl:path rdf:resource="http://dbpedia.org/ontology/religion"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid12">
+        <shacl:in>
+            <rdf:Description/>
+        </shacl:in>
+        <shacl:message>Error: La raza/etnia no es válida.</shacl:message>
+        <shacl:path rdf:resource="http://dbpedia.org/ontology/race"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/PersonNameShape -->
+
+
+    <NamedIndividual rdf:about="https://schema.org/PersonNameShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid14"/>
+        <shacl:targetClass rdf:resource="https://schema.org/Person"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid14">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:message>Error: El nombre de la persona no puede estar vacío (mínimo 1 carácter).</shacl:message>
+        <shacl:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minLength>
+        <shacl:path rdf:resource="https://schema.org/name"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

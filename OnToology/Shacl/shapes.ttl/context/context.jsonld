@@ -1,0 +1,31 @@
+{
+  "@context" : {
+    "ignoredProperties" : {
+      "@id" : "http://www.w3.org/ns/shacl#ignoredProperties"
+    },
+    "datatype" : {
+      "@id" : "http://www.w3.org/ns/shacl#datatype"
+    },
+    "path" : {
+      "@id" : "http://www.w3.org/ns/shacl#path"
+    },
+    "targetClass" : {
+      "@id" : "http://www.w3.org/ns/shacl#targetClass"
+    },
+    "closed" : {
+      "@id" : "http://www.w3.org/ns/shacl#closed"
+    },
+    "in" : {
+      "@id" : "http://www.w3.org/ns/shacl#in"
+    },
+    "property" : {
+      "@id" : "http://www.w3.org/ns/shacl#property"
+    },
+    "class" : {
+      "@id" : "http://www.w3.org/ns/shacl#class"
+    },
+    "NodeShape" : {
+      "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+    }
+  }
+}

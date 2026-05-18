@@ -1,0 +1,179 @@
+{
+  "@context" : {
+    "happenedAt" : {
+      "@id" : "http://purl.org/oscar/ontology#happenedAt",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "movieName" : {
+      "@id" : "http://purl.org/oscar/ontology#movieName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Category" : {
+      "@id" : "http://purl.org/oscar/ontology#Category"
+    },
+    "sexualOrientationName" : {
+      "@id" : "http://purl.org/oscar/ontology#sexualOrientationName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isPartOfState" : {
+      "@id" : "http://purl.org/oscar/ontology#isPartOfState",
+      "@type" : "@id"
+    },
+    "plays" : {
+      "@id" : "http://purl.org/oscar/ontology#plays",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "filmId" : {
+      "@id" : "http://purl.org/oscar/ontology#filmId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Character" : {
+      "@id" : "http://purl.org/oscar/ontology#Character"
+    },
+    "nomId" : {
+      "@id" : "http://purl.org/oscar/ontology#nomId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasEthnicity" : {
+      "@id" : "http://purl.org/oscar/ontology#hasEthnicity",
+      "@type" : "@id"
+    },
+    "isNominatedForMovie" : {
+      "@id" : "http://purl.org/oscar/ontology#isNominatedForMovie",
+      "@type" : "@id"
+    },
+    "dateOfBirth" : {
+      "@id" : "http://purl.org/oscar/ontology#dateOfBirth",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "includesCategory" : {
+      "@id" : "http://purl.org/oscar/ontology#includesCategory",
+      "@type" : "@id"
+    },
+    "Event" : {
+      "@id" : "https://schema.org/Event"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "religionName" : {
+      "@id" : "http://purl.org/oscar/ontology#religionName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Race" : {
+      "@id" : "http://dbpedia.org/ontology/Race"
+    },
+    "SexualOrientation" : {
+      "@id" : "http://dbpedia.org/ontology/SexualOrientation"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "name" : {
+      "@id" : "http://purl.org/oscar/ontology#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eventName" : {
+      "@id" : "http://purl.org/oscar/ontology#eventName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "surname" : {
+      "@id" : "http://purl.org/oscar/ontology#surname",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nomineeIds" : {
+      "@id" : "http://purl.org/oscar/ontology#nomineeIds",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "createdWith" : {
+      "@id" : "https://w3id.org/mod#createdWith"
+    },
+    "Nomination" : {
+      "@id" : "http://purl.org/oscar/ontology#Nomination"
+    },
+    "bioURL" : {
+      "@id" : "http://purl.org/oscar/ontology#bioURL",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "isWinner" : {
+      "@id" : "http://purl.org/oscar/ontology#isWinner",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Place" : {
+      "@id" : "http://purl.org/oscar/ontology#Place"
+    },
+    "Movie" : {
+      "@id" : "https://schema.org/Movie"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "year" : {
+      "@id" : "http://purl.org/oscar/ontology#year",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Religion" : {
+      "@id" : "http://dbpedia.org/ontology/Religion"
+    },
+    "placeName" : {
+      "@id" : "http://purl.org/oscar/ontology#placeName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "stateName" : {
+      "@id" : "http://purl.org/oscar/ontology#stateName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "State" : {
+      "@id" : "http://purl.org/oscar/ontology#State"
+    },
+    "broader" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+      "@type" : "@id"
+    },
+    "hasReligion" : {
+      "@id" : "http://purl.org/oscar/ontology#hasReligion",
+      "@type" : "@id"
+    },
+    "raceName" : {
+      "@id" : "http://purl.org/oscar/ontology#raceName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "categoryName" : {
+      "@id" : "http://purl.org/oscar/ontology#categoryName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasSexualOrientation" : {
+      "@id" : "http://purl.org/oscar/ontology#hasSexualOrientation",
+      "@type" : "@id"
+    },
+    "nominee" : {
+      "@id" : "https://schema.org/nominee",
+      "@type" : "@id"
+    },
+    "isMultifilm" : {
+      "@id" : "http://purl.org/oscar/ontology#isMultifilm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "appearsInMovie" : {
+      "@id" : "http://purl.org/oscar/ontology#appearsInMovie",
+      "@type" : "@id"
+    },
+    "nominationName" : {
+      "@id" : "http://purl.org/oscar/ontology#nominationName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wasBornIn" : {
+      "@id" : "http://purl.org/oscar/ontology#wasBornIn",
+      "@type" : "@id"
+    }
+  }
+}

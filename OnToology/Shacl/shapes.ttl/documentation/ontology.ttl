@@ -1,0 +1,161 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/shacl#class
+<http://www.w3.org/ns/shacl#class> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#closed
+<http://www.w3.org/ns/shacl#closed> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#datatype
+<http://www.w3.org/ns/shacl#datatype> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#ignoredProperties
+<http://www.w3.org/ns/shacl#ignoredProperties> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#in
+<http://www.w3.org/ns/shacl#in> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#maxCount
+<http://www.w3.org/ns/shacl#maxCount> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#message
+<http://www.w3.org/ns/shacl#message> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#minCount
+<http://www.w3.org/ns/shacl#minCount> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#minInclusive
+<http://www.w3.org/ns/shacl#minInclusive> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#minLength
+<http://www.w3.org/ns/shacl#minLength> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#path
+<http://www.w3.org/ns/shacl#path> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#property
+<http://www.w3.org/ns/shacl#property> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#targetClass
+<http://www.w3.org/ns/shacl#targetClass> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/oscar/ontology#CharacterShape
+<http://purl.org/oscar/ontology#CharacterShape> rdf:type owl:NamedIndividual ,
+                                                         <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                <http://www.w3.org/ns/shacl#closed> "true"^^xsd:boolean ;
+                                                <http://www.w3.org/ns/shacl#ignoredProperties> [ ] ;
+<http://www.w3.org/ns/shacl#property> _:genid3 ;
+<http://www.w3.org/ns/shacl#targetClass> <http://purl.org/oscar/ontology#Character> .
+
+_:genid3 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+          <http://www.w3.org/ns/shacl#path> <https://schema.org/name> .
+
+
+###  http://purl.org/oscar/ontology#NominationShape
+<http://purl.org/oscar/ontology#NominationShape> rdf:type owl:NamedIndividual ,
+                                                          <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                 <http://www.w3.org/ns/shacl#property> _:genid4 ,
+                                                                                       _:genid5 ,
+                                                                                       _:genid6 ;
+                                                 <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/oscar/ontology#Nomination> .
+
+_:genid4 <http://www.w3.org/ns/shacl#class> <https://schema.org/Person> ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#message> "Error: Toda nominación debe referenciar exactamente a una persona (schema:Person)." ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#path> <https://schema.org/nominee> .
+
+_:genid5 <http://www.w3.org/ns/shacl#class> <https://schema.org/Movie> ;
+          <http://www.w3.org/ns/shacl#message> "Error: Toda nominación debe referenciar a una película de la clase schema:Movie." ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#path> <http://purl.org/oscar/ontology#isNominatedforMovie> .
+
+_:genid6 <http://www.w3.org/ns/shacl#datatype> xsd:boolean ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#message> "Error: El valor de isWinner debe ser un único booleano (true o false)." ;
+          <http://www.w3.org/ns/shacl#path> <http://purl.org/oscar/ontology#isWinner> .
+
+
+###  https://schema.org/EventYearShape
+<https://schema.org/EventYearShape> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/ns/shacl#NodeShape> ;
+                                    <http://www.w3.org/ns/shacl#property> _:genid7 ;
+                                    <http://www.w3.org/ns/shacl#targetClass> <https://schema.org/Event> .
+
+_:genid7 <http://www.w3.org/ns/shacl#datatype> xsd:integer ;
+          <http://www.w3.org/ns/shacl#message> "Error: El año de la ceremonia debe ser numérico y mayor o igual a 1927." ;
+          <http://www.w3.org/ns/shacl#minInclusive> 1927 ;
+          <http://www.w3.org/ns/shacl#path> <http://purl.org/oscar/ontology#year> .
+
+
+###  https://schema.org/PersonDemographicsShape
+<https://schema.org/PersonDemographicsShape> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/ns/shacl#NodeShape> ;
+                                             <http://www.w3.org/ns/shacl#property> _:genid8 ,
+                                                                                   _:genid10 ,
+                                                                                   _:genid12 ;
+                                             <http://www.w3.org/ns/shacl#targetClass> <https://schema.org/Person> .
+
+_:genid8 <http://www.w3.org/ns/shacl#in> [ ] ;
+<http://www.w3.org/ns/shacl#message> "Error: La orientación sexual no coincide con los valores permitidos." ;
+<http://www.w3.org/ns/shacl#path> <http://dbpedia.org/ontology/sexualOrientation> .
+
+_:genid10 <http://www.w3.org/ns/shacl#in> [ ] ;
+<http://www.w3.org/ns/shacl#message> "Error: La religión no coincide con los valores permitidos del dataset." ;
+<http://www.w3.org/ns/shacl#path> <http://dbpedia.org/ontology/religion> .
+
+_:genid12 <http://www.w3.org/ns/shacl#in> [ ] ;
+<http://www.w3.org/ns/shacl#message> "Error: La raza/etnia no es válida." ;
+<http://www.w3.org/ns/shacl#path> <http://dbpedia.org/ontology/race> .
+
+
+###  https://schema.org/PersonNameShape
+<https://schema.org/PersonNameShape> rdf:type owl:NamedIndividual ,
+                                              <http://www.w3.org/ns/shacl#NodeShape> ;
+                                     <http://www.w3.org/ns/shacl#property> _:genid14 ;
+                                     <http://www.w3.org/ns/shacl#targetClass> <https://schema.org/Person> .
+
+_:genid14 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#message> "Error: El nombre de la persona no puede estar vacío (mínimo 1 carácter)." ;
+           <http://www.w3.org/ns/shacl#minLength> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://schema.org/name> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

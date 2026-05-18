@@ -1,0 +1,311 @@
+<http://purl.org/dc/elements/1.1/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/dc/elements/1.1/> <http://purl.org/dc/elements/1.1/creator> "Grupo 8" .
+<http://purl.org/dc/elements/1.1/> <http://purl.org/dc/elements/1.1/title> "Oscars Ontology" .
+<http://purl.org/dc/elements/1.1/> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://purl.org/dc/elements/1.1/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<http://purl.org/dc/elements/1.1/> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/oscar/ontology#appearsInMovie
+<http://purl.org/oscar/ontology#appearsInMovie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#appearsInMovie> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#appearsInMovie> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Movie> .
+<http://purl.org/oscar/ontology#appearsInMovie> <http://www.w3.org/2000/01/rdf-schema#label> "appears in movie" .
+# 
+# http://purl.org/oscar/ontology#happenedAt
+<http://purl.org/oscar/ontology#happenedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#happenedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Nomination> .
+<http://purl.org/oscar/ontology#happenedAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Event> .
+<http://purl.org/oscar/ontology#happenedAt> <http://www.w3.org/2000/01/rdf-schema#label> "happened at" .
+# 
+# http://purl.org/oscar/ontology#hasEthnicity
+<http://purl.org/oscar/ontology#hasEthnicity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#hasEthnicity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#hasEthnicity> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Race> .
+<http://purl.org/oscar/ontology#hasEthnicity> <http://www.w3.org/2000/01/rdf-schema#label> "has ethnicity" .
+# 
+# http://purl.org/oscar/ontology#hasReligion
+<http://purl.org/oscar/ontology#hasReligion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#hasReligion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#hasReligion> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Religion> .
+<http://purl.org/oscar/ontology#hasReligion> <http://www.w3.org/2000/01/rdf-schema#label> "has religion" .
+# 
+# http://purl.org/oscar/ontology#hasSexualOrientation
+<http://purl.org/oscar/ontology#hasSexualOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#hasSexualOrientation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#hasSexualOrientation> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/SexualOrientation> .
+<http://purl.org/oscar/ontology#hasSexualOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "has sexual orientation" .
+# 
+# http://purl.org/oscar/ontology#includesCategory
+<http://purl.org/oscar/ontology#includesCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#includesCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Event> .
+<http://purl.org/oscar/ontology#includesCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/oscar/ontology#Category> .
+<http://purl.org/oscar/ontology#includesCategory> <http://www.w3.org/2000/01/rdf-schema#label> "includes category" .
+# 
+# http://purl.org/oscar/ontology#isNominatedForMovie
+<http://purl.org/oscar/ontology#isNominatedForMovie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#isNominatedForMovie> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Nomination> .
+<http://purl.org/oscar/ontology#isNominatedForMovie> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Movie> .
+<http://purl.org/oscar/ontology#isNominatedForMovie> <http://www.w3.org/2000/01/rdf-schema#label> "is nominated for movie" .
+# 
+# http://purl.org/oscar/ontology#isPartOfState
+<http://purl.org/oscar/ontology#isPartOfState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#isPartOfState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Place> .
+<http://purl.org/oscar/ontology#isPartOfState> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/oscar/ontology#State> .
+<http://purl.org/oscar/ontology#isPartOfState> <http://www.w3.org/2000/01/rdf-schema#label> "is part of state" .
+# 
+# http://purl.org/oscar/ontology#plays
+<http://purl.org/oscar/ontology#plays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#plays> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#plays> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/oscar/ontology#Character> .
+<http://purl.org/oscar/ontology#plays> <http://www.w3.org/2000/01/rdf-schema#label> "plays" .
+# 
+# http://purl.org/oscar/ontology#wasBornIn
+<http://purl.org/oscar/ontology#wasBornIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/oscar/ontology#wasBornIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#wasBornIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/oscar/ontology#Place> .
+<http://purl.org/oscar/ontology#wasBornIn> <http://www.w3.org/2000/01/rdf-schema#label> "was born in" .
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Category> .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/oscar/ontology#Nomination> .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2000/01/rdf-schema#label> "broader" .
+# 
+# https://schema.org/nominee
+<https://schema.org/nominee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/nominee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Nomination> .
+<https://schema.org/nominee> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<https://schema.org/nominee> <http://www.w3.org/2000/01/rdf-schema#label> "nominee" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/oscar/ontology#bioURL
+<http://purl.org/oscar/ontology#bioURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#bioURL> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#bioURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/oscar/ontology#categoryName
+<http://purl.org/oscar/ontology#categoryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#categoryName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Category> .
+<http://purl.org/oscar/ontology#categoryName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#dateOfBirth
+<http://purl.org/oscar/ontology#dateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#dateOfBirth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#dateOfBirth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+# 
+# http://purl.org/oscar/ontology#eventName
+<http://purl.org/oscar/ontology#eventName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#eventName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Event> .
+<http://purl.org/oscar/ontology#eventName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#filmId
+<http://purl.org/oscar/ontology#filmId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#filmId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Movie> .
+<http://purl.org/oscar/ontology#filmId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://purl.org/oscar/ontology#isMultifilm
+<http://purl.org/oscar/ontology#isMultifilm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#isMultifilm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Nomination> .
+<http://purl.org/oscar/ontology#isMultifilm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://purl.org/oscar/ontology#isWinner
+<http://purl.org/oscar/ontology#isWinner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#isWinner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Nomination> .
+<http://purl.org/oscar/ontology#isWinner> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://purl.org/oscar/ontology#movieName
+<http://purl.org/oscar/ontology#movieName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#movieName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Movie> .
+<http://purl.org/oscar/ontology#movieName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#name
+<http://purl.org/oscar/ontology#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#nomId
+<http://purl.org/oscar/ontology#nomId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#nomId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Nomination> .
+<http://purl.org/oscar/ontology#nomId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://purl.org/oscar/ontology#nominationName
+<http://purl.org/oscar/ontology#nominationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#nominationName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Nomination> .
+<http://purl.org/oscar/ontology#nominationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#nomineeIds
+<http://purl.org/oscar/ontology#nomineeIds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#nomineeIds> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#nomineeIds> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#placeName
+<http://purl.org/oscar/ontology#placeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#placeName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#Place> .
+<http://purl.org/oscar/ontology#placeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#raceName
+<http://purl.org/oscar/ontology#raceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#raceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Race> .
+<http://purl.org/oscar/ontology#raceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#religionName
+<http://purl.org/oscar/ontology#religionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#religionName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Religion> .
+<http://purl.org/oscar/ontology#religionName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#sexualOrientationName
+<http://purl.org/oscar/ontology#sexualOrientationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#sexualOrientationName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/SexualOrientation> .
+<http://purl.org/oscar/ontology#sexualOrientationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#stateName
+<http://purl.org/oscar/ontology#stateName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#stateName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oscar/ontology#State> .
+<http://purl.org/oscar/ontology#stateName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#surname
+<http://purl.org/oscar/ontology#surname> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#surname> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/oscar/ontology#surname> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/oscar/ontology#year
+<http://purl.org/oscar/ontology#year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/oscar/ontology#year> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Event> .
+<http://purl.org/oscar/ontology#year> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/ontology/Race
+<http://dbpedia.org/ontology/Race> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dbpedia.org/ontology/Race> <http://www.w3.org/2000/01/rdf-schema#label> "Race" .
+# 
+# http://dbpedia.org/ontology/Religion
+<http://dbpedia.org/ontology/Religion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dbpedia.org/ontology/Religion> <http://www.w3.org/2000/01/rdf-schema#label> "Religion" .
+# 
+# http://dbpedia.org/ontology/SexualOrientation
+<http://dbpedia.org/ontology/SexualOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dbpedia.org/ontology/SexualOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "Sexual Orientation" .
+# 
+# http://purl.org/oscar/ontology#Category
+<http://purl.org/oscar/ontology#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/oscar/ontology#Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category" .
+# 
+# http://purl.org/oscar/ontology#Character
+<http://purl.org/oscar/ontology#Character> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/oscar/ontology#Character> <http://www.w3.org/2000/01/rdf-schema#label> "Character" .
+# 
+# http://purl.org/oscar/ontology#Nomination
+<http://purl.org/oscar/ontology#Nomination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/oscar/ontology#Nomination> <http://www.w3.org/2000/01/rdf-schema#label> "Nomination" .
+# 
+# http://purl.org/oscar/ontology#Place
+<http://purl.org/oscar/ontology#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/oscar/ontology#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
+# 
+# http://purl.org/oscar/ontology#State
+<http://purl.org/oscar/ontology#State> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/oscar/ontology#State> <http://www.w3.org/2000/01/rdf-schema#label> "State" .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# https://schema.org/Event
+<https://schema.org/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+# 
+# https://schema.org/Movie
+<https://schema.org/Movie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Movie> <http://www.w3.org/2000/01/rdf-schema#label> "Movie" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Movie> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Event> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Person> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/oscar/ontology#Nomination> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/oscar/ontology#Character> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/oscar/ontology#Category> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,306 @@
+@prefix : <http://purl.org/oscar/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/oscar/ontology#> .
+
+<http://purl.org/oscar/ontology#> rdf:type owl:Ontology ;
+                                   <http://purl.org/dc/elements/1.1/creator> "Grupo 8" ;
+                                   <http://purl.org/dc/elements/1.1/title> "Oscars Ontology" ;
+                                   owl:versionInfo "1.0.0" ;
+                                   <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/oscar/ontology#actedIn
+:actedIn rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+         rdfs:range :Character ;
+         rdfs:label "acted in" .
+
+
+###  http://purl.org/oscar/ontology#appearsIn
+:appearsIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :Character ;
+           rdfs:range <https://schema.org/Movie> ;
+           rdfs:label "appears in" .
+
+
+###  http://purl.org/oscar/ontology#happenedAt
+:happenedAt rdf:type owl:ObjectProperty ;
+            rdfs:domain :Nomination ;
+            rdfs:range <https://schema.org/Event> ;
+            rdfs:label "happened at" .
+
+
+###  http://purl.org/oscar/ontology#hasEthnicity
+:hasEthnicity rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+              rdfs:range <http://dbpedia.org/ontology/Race> ;
+              rdfs:label "has ethnicity" .
+
+
+###  http://purl.org/oscar/ontology#hasNominee
+:hasNominee rdf:type owl:ObjectProperty ;
+            rdfs:domain :Nomination ;
+            rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
+            rdfs:label "has nominee" .
+
+
+###  http://purl.org/oscar/ontology#hasReligion
+:hasReligion rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+             rdfs:range <http://dbpedia.org/ontology/Religion> ;
+             rdfs:label "has religion" .
+
+
+###  http://purl.org/oscar/ontology#hasSexualOrientation
+:hasSexualOrientation rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                      rdfs:range <http://dbpedia.org/ontology/SexualOrientation> ;
+                      rdfs:label "has sexual orientation" .
+
+
+###  http://purl.org/oscar/ontology#includesCategory
+:includesCategory rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://schema.org/Event> ;
+                  rdfs:range :Category ;
+                  rdfs:label "includes category" .
+
+
+###  http://purl.org/oscar/ontology#isNominatedForMovie
+:isNominatedForMovie rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Nomination ;
+                     rdfs:range <https://schema.org/Movie> ;
+                     rdfs:label "is nominated for movie" .
+
+
+###  http://purl.org/oscar/ontology#isPartOfState
+:isPartOfState rdf:type owl:ObjectProperty ;
+               rdfs:domain :Place ;
+               rdfs:range :State ;
+               rdfs:label "is part of state" .
+
+
+###  http://purl.org/oscar/ontology#wasBornIn
+:wasBornIn rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+           rdfs:range :Place ;
+           rdfs:label "was born in" .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain :Category ;
+                                               rdfs:range :Nomination ;
+                                               rdfs:label "narrower" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/oscar/ontology#bioURL
+:bioURL rdf:type owl:DatatypeProperty ;
+        rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+        rdfs:label "bio u r l" .
+
+
+###  http://purl.org/oscar/ontology#categoryName
+:categoryName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Category ;
+              rdfs:label "category name" .
+
+
+###  http://purl.org/oscar/ontology#characterName
+:characterName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Character ;
+               rdfs:label "character name" .
+
+
+###  http://purl.org/oscar/ontology#dateOfBirth
+:dateOfBirth rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+             rdfs:label "date of birth" .
+
+
+###  http://purl.org/oscar/ontology#eventName
+:eventName rdf:type owl:DatatypeProperty ;
+           rdfs:domain <https://schema.org/Event> ;
+           rdfs:label "event name" .
+
+
+###  http://purl.org/oscar/ontology#filmId
+:filmId rdf:type owl:DatatypeProperty ;
+        rdfs:domain <https://schema.org/Movie> ;
+        rdfs:label "film id" .
+
+
+###  http://purl.org/oscar/ontology#isMultifilm
+:isMultifilm rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Nomination ;
+             rdfs:label "is multifilm" .
+
+
+###  http://purl.org/oscar/ontology#isWinner
+:isWinner rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Nomination ;
+          rdfs:label "is winner" .
+
+
+###  http://purl.org/oscar/ontology#movieName
+:movieName rdf:type owl:DatatypeProperty ;
+           rdfs:domain <https://schema.org/Movie> ;
+           rdfs:label "movie name" .
+
+
+###  http://purl.org/oscar/ontology#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+      rdfs:label "name" .
+
+
+###  http://purl.org/oscar/ontology#nomId
+:nomId rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Nomination ;
+       rdfs:label "nom id" .
+
+
+###  http://purl.org/oscar/ontology#nominationName
+:nominationName rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Nomination ;
+                rdfs:label "nomination name" .
+
+
+###  http://purl.org/oscar/ontology#nomineeIds
+:nomineeIds rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+            rdfs:label "nominee ids" .
+
+
+###  http://purl.org/oscar/ontology#placeName
+:placeName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Place ;
+           rdfs:label "place name" .
+
+
+###  http://purl.org/oscar/ontology#raceName
+:raceName rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://dbpedia.org/ontology/Race> ;
+          rdfs:label "race name" .
+
+
+###  http://purl.org/oscar/ontology#religionName
+:religionName rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://dbpedia.org/ontology/Religion> ;
+              rdfs:label "religion name" .
+
+
+###  http://purl.org/oscar/ontology#sexualOrientationName
+:sexualOrientationName rdf:type owl:DatatypeProperty ;
+                       rdfs:domain <http://dbpedia.org/ontology/SexualOrientation> ;
+                       rdfs:label "sexual orientation name" .
+
+
+###  http://purl.org/oscar/ontology#stateName
+:stateName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :State ;
+           rdfs:label "state name" .
+
+
+###  http://purl.org/oscar/ontology#surname
+:surname rdf:type owl:DatatypeProperty ;
+         rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+         rdfs:label "surname" .
+
+
+###  http://purl.org/oscar/ontology#year
+:year rdf:type owl:DatatypeProperty ;
+      rdfs:domain <https://schema.org/Event> ;
+      rdfs:label "year" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Race
+<http://dbpedia.org/ontology/Race> rdf:type owl:Class ;
+                                   rdfs:label "Race" .
+
+
+###  http://dbpedia.org/ontology/Religion
+<http://dbpedia.org/ontology/Religion> rdf:type owl:Class ;
+                                       rdfs:label "Religion" .
+
+
+###  http://dbpedia.org/ontology/SexualOrientation
+<http://dbpedia.org/ontology/SexualOrientation> rdf:type owl:Class ;
+                                                rdfs:label "Sexual Orientation" .
+
+
+###  http://purl.org/oscar/ontology#Category
+:Category rdf:type owl:Class ;
+          rdfs:label "Category" .
+
+
+###  http://purl.org/oscar/ontology#Character
+:Character rdf:type owl:Class ;
+           rdfs:label "Character" .
+
+
+###  http://purl.org/oscar/ontology#Nomination
+:Nomination rdf:type owl:Class ;
+            rdfs:label "Nomination" .
+
+
+###  http://purl.org/oscar/ontology#Place
+:Place rdf:type owl:Class ;
+       rdfs:label "Place" .
+
+
+###  http://purl.org/oscar/ontology#State
+:State rdf:type owl:Class ;
+       rdfs:label "State" .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:label "Person" .
+
+
+###  https://schema.org/Event
+<https://schema.org/Event> rdf:type owl:Class ;
+                           rdfs:label "Event" .
+
+
+###  https://schema.org/Movie
+<https://schema.org/Movie> rdf:type owl:Class ;
+                           rdfs:label "Movie" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
