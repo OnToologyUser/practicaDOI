@@ -8,20 +8,25 @@
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-dc: a owl:Ontology ;
+dc:creator a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+oscar: a owl:Ontology ;
     dc:creator "Grupo 8" ;
     dc:title "Oscars Ontology" ;
     owl:versionInfo "1.0.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
-dc:creator a owl:AnnotationProperty .
+oscar:actedIn a owl:ObjectProperty ;
+    rdfs:label "acted in" ;
+    rdfs:domain foaf:Person ;
+    rdfs:range oscar:Character .
 
-dc:title a owl:AnnotationProperty .
-
-oscar:appearsInMovie a owl:ObjectProperty ;
-    rdfs:label "appears in movie" ;
-    rdfs:domain schema:Movie ;
-    rdfs:range foaf:Person .
+oscar:appearsIn a owl:ObjectProperty ;
+    rdfs:label "appears in" ;
+    rdfs:domain oscar:Character ;
+    rdfs:range schema:Movie .
 
 oscar:bioURL a owl:DatatypeProperty ;
     rdfs:label "bio u r l" ;
@@ -30,6 +35,10 @@ oscar:bioURL a owl:DatatypeProperty ;
 oscar:categoryName a owl:DatatypeProperty ;
     rdfs:label "category name" ;
     rdfs:domain oscar:Category .
+
+oscar:characterName a owl:DatatypeProperty ;
+    rdfs:label "character name" ;
+    rdfs:domain oscar:Character .
 
 oscar:dateOfBirth a owl:DatatypeProperty ;
     rdfs:label "date of birth" ;
@@ -52,6 +61,11 @@ oscar:hasEthnicity a owl:ObjectProperty ;
     rdfs:label "has ethnicity" ;
     rdfs:domain foaf:Person ;
     rdfs:range dbo:Race .
+
+oscar:hasNominee a owl:ObjectProperty ;
+    rdfs:label "has nominee" ;
+    rdfs:domain oscar:Nomination ;
+    rdfs:range foaf:Person .
 
 oscar:hasReligion a owl:ObjectProperty ;
     rdfs:label "has religion" ;
@@ -110,11 +124,6 @@ oscar:placeName a owl:DatatypeProperty ;
     rdfs:label "place name" ;
     rdfs:domain oscar:Place .
 
-oscar:plays a owl:ObjectProperty ;
-    rdfs:label "plays" ;
-    rdfs:domain foaf:Person ;
-    rdfs:range oscar:Character .
-
 oscar:raceName a owl:DatatypeProperty ;
     rdfs:label "race name" ;
     rdfs:domain dbo:Race .
@@ -146,18 +155,10 @@ oscar:year a owl:DatatypeProperty ;
 
 owl:versionInfo a owl:AnnotationProperty .
 
-skos:broader a owl:ObjectProperty ;
-    rdfs:label "broader" ;
+skos:narrower a owl:ObjectProperty ;
+    rdfs:label "narrower" ;
     rdfs:domain oscar:Category ;
     rdfs:range oscar:Nomination .
-
-schema:nominee a owl:ObjectProperty ;
-    rdfs:label "nominee" ;
-    rdfs:domain oscar:Nomination ;
-    rdfs:range foaf:Person .
-
-oscar:Character a owl:Class ;
-    rdfs:label "Character" .
 
 dbo:Race a owl:Class ;
     rdfs:label "Race" .
@@ -173,6 +174,9 @@ oscar:State a owl:Class ;
 
 oscar:Category a owl:Class ;
     rdfs:label "Category" .
+
+oscar:Character a owl:Class ;
+    rdfs:label "Character" .
 
 oscar:Place a owl:Class ;
     rdfs:label "Place" .
