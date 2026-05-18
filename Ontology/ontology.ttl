@@ -1,195 +1,241 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix mod: <https://w3id.org/mod#> .
-@prefix oscar: <http://purl.org/oscar/ontology#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ns0: <https://w3id.org/mod#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dc:creator a owl:AnnotationProperty .
+dc11:
+  a owl:Ontology ;
+  dc11:creator "Grupo 8" ;
+  dc11:title "Oscars Ontology" ;
+  owl:versionInfo "1.0.0" ;
+  dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  ns0:createdWith <https://chowlk.linkeddata.es/> .
 
-dc:title a owl:AnnotationProperty .
-
-oscar: a owl:Ontology ;
-    dc:creator "Grupo 8" ;
-    dc:title "Oscars Ontology" ;
-    owl:versionInfo "1.0.0" ;
-    mod:createdWith <https://chowlk.linkeddata.es/> .
-
-oscar:actedIn a owl:ObjectProperty ;
-    rdfs:label "acted in" ;
-    rdfs:domain foaf:Person ;
-    rdfs:range oscar:Character .
-
-oscar:appearsIn a owl:ObjectProperty ;
-    rdfs:label "appears in" ;
-    rdfs:domain oscar:Character ;
-    rdfs:range schema:Movie .
-
-oscar:bioURL a owl:DatatypeProperty ;
-    rdfs:label "bio u r l" ;
-    rdfs:domain foaf:Person .
-
-oscar:categoryName a owl:DatatypeProperty ;
-    rdfs:label "category name" ;
-    rdfs:domain oscar:Category .
-
-oscar:characterName a owl:DatatypeProperty ;
-    rdfs:label "character name" ;
-    rdfs:domain oscar:Character .
-
-oscar:dateOfBirth a owl:DatatypeProperty ;
-    rdfs:label "date of birth" ;
-    rdfs:domain foaf:Person .
-
-oscar:eventName a owl:DatatypeProperty ;
-    rdfs:label "event name" ;
-    rdfs:domain schema:Event .
-
-oscar:filmId a owl:DatatypeProperty ;
-    rdfs:label "film id" ;
-    rdfs:domain schema:Movie .
-
-oscar:happenedAt a owl:ObjectProperty ;
-    rdfs:label "happened at" ;
-    rdfs:domain oscar:Nomination ;
-    rdfs:range schema:Event .
-
-oscar:hasEthnicity a owl:ObjectProperty ;
-    rdfs:label "has ethnicity" ;
-    rdfs:domain foaf:Person ;
-    rdfs:range dbo:Race .
-
-oscar:hasNominee a owl:ObjectProperty ;
-    rdfs:label "has nominee" ;
-    rdfs:domain oscar:Nomination ;
-    rdfs:range foaf:Person .
-
-oscar:hasReligion a owl:ObjectProperty ;
-    rdfs:label "has religion" ;
-    rdfs:domain foaf:Person ;
-    rdfs:range dbo:Religion .
-
-oscar:hasSexualOrientation a owl:ObjectProperty ;
-    rdfs:label "has sexual orientation" ;
-    rdfs:domain foaf:Person ;
-    rdfs:range dbo:SexualOrientation .
-
-oscar:includesCategory a owl:ObjectProperty ;
-    rdfs:label "includes category" ;
-    rdfs:domain schema:Event ;
-    rdfs:range oscar:Category .
-
-oscar:isMultifilm a owl:DatatypeProperty ;
-    rdfs:label "is multifilm" ;
-    rdfs:domain oscar:Nomination .
-
-oscar:isNominatedForMovie a owl:ObjectProperty ;
-    rdfs:label "is nominated for movie" ;
-    rdfs:domain oscar:Nomination ;
-    rdfs:range schema:Movie .
-
-oscar:isPartOfState a owl:ObjectProperty ;
-    rdfs:label "is part of state" ;
-    rdfs:domain oscar:Place ;
-    rdfs:range oscar:State .
-
-oscar:isWinner a owl:DatatypeProperty ;
-    rdfs:label "is winner" ;
-    rdfs:domain oscar:Nomination .
-
-oscar:movieName a owl:DatatypeProperty ;
-    rdfs:label "movie name" ;
-    rdfs:domain schema:Movie .
-
-oscar:name a owl:DatatypeProperty ;
-    rdfs:label "name" ;
-    rdfs:domain foaf:Person .
-
-oscar:nomId a owl:DatatypeProperty ;
-    rdfs:label "nom id" ;
-    rdfs:domain oscar:Nomination .
-
-oscar:nominationName a owl:DatatypeProperty ;
-    rdfs:label "nomination name" ;
-    rdfs:domain oscar:Nomination .
-
-oscar:nomineeIds a owl:DatatypeProperty ;
-    rdfs:label "nominee ids" ;
-    rdfs:domain foaf:Person .
-
-oscar:placeName a owl:DatatypeProperty ;
-    rdfs:label "place name" ;
-    rdfs:domain oscar:Place .
-
-oscar:raceName a owl:DatatypeProperty ;
-    rdfs:label "race name" ;
-    rdfs:domain dbo:Race .
-
-oscar:religionName a owl:DatatypeProperty ;
-    rdfs:label "religion name" ;
-    rdfs:domain dbo:Religion .
-
-oscar:sexualOrientationName a owl:DatatypeProperty ;
-    rdfs:label "sexual orientation name" ;
-    rdfs:domain dbo:SexualOrientation .
-
-oscar:stateName a owl:DatatypeProperty ;
-    rdfs:label "state name" ;
-    rdfs:domain oscar:State .
-
-oscar:surname a owl:DatatypeProperty ;
-    rdfs:label "surname" ;
-    rdfs:domain foaf:Person .
-
-oscar:wasBornIn a owl:ObjectProperty ;
-    rdfs:label "was born in" ;
-    rdfs:domain foaf:Person ;
-    rdfs:range oscar:Place .
-
-oscar:year a owl:DatatypeProperty ;
-    rdfs:label "year" ;
-    rdfs:domain schema:Event .
-
+dc11:creator a owl:AnnotationProperty .
+dc11:title a owl:AnnotationProperty .
 owl:versionInfo a owl:AnnotationProperty .
+<http://purl.org/oscar/ontology#appearsInMovie>
+  a owl:ObjectProperty ;
+  rdfs:label "appears in movie" ;
+  rdfs:domain foaf:Person ;
+  rdfs:range <https://schema.org/Movie> .
 
-skos:narrower a owl:ObjectProperty ;
-    rdfs:label "narrower" ;
-    rdfs:domain oscar:Category ;
-    rdfs:range oscar:Nomination .
+<http://purl.org/oscar/ontology#happenedAt>
+  a owl:ObjectProperty ;
+  rdfs:label "happened at" ;
+  rdfs:domain <http://purl.org/oscar/ontology#Nomination> ;
+  rdfs:range <https://schema.org/Event> .
 
-dbo:Race a owl:Class ;
-    rdfs:label "Race" .
+<http://purl.org/oscar/ontology#hasEthnicity>
+  a owl:ObjectProperty ;
+  rdfs:label "has ethnicity" ;
+  rdfs:domain foaf:Person ;
+  rdfs:range <http://dbpedia.org/ontology/Race> .
 
-dbo:Religion a owl:Class ;
-    rdfs:label "Religion" .
+<http://purl.org/oscar/ontology#hasReligion>
+  a owl:ObjectProperty ;
+  rdfs:label "has religion" ;
+  rdfs:domain foaf:Person ;
+  rdfs:range <http://dbpedia.org/ontology/Religion> .
 
-dbo:SexualOrientation a owl:Class ;
-    rdfs:label "Sexual Orientation" .
+<http://purl.org/oscar/ontology#hasSexualOrientation>
+  a owl:ObjectProperty ;
+  rdfs:label "has sexual orientation" ;
+  rdfs:domain foaf:Person ;
+  rdfs:range <http://dbpedia.org/ontology/SexualOrientation> .
 
-oscar:State a owl:Class ;
-    rdfs:label "State" .
+<http://purl.org/oscar/ontology#includesCategory>
+  a owl:ObjectProperty ;
+  rdfs:label "includes category" ;
+  rdfs:domain <https://schema.org/Event> ;
+  rdfs:range <http://purl.org/oscar/ontology#Category> .
 
-oscar:Category a owl:Class ;
-    rdfs:label "Category" .
+<http://purl.org/oscar/ontology#isNominatedForMovie>
+  a owl:ObjectProperty ;
+  rdfs:label "is nominated for movie" ;
+  rdfs:domain <http://purl.org/oscar/ontology#Nomination> ;
+  rdfs:range <https://schema.org/Movie> .
 
-oscar:Character a owl:Class ;
-    rdfs:label "Character" .
+<http://purl.org/oscar/ontology#isPartOfState>
+  a owl:ObjectProperty ;
+  rdfs:label "is part of state" ;
+  rdfs:domain <http://purl.org/oscar/ontology#Place> ;
+  rdfs:range <http://purl.org/oscar/ontology#State> .
 
-oscar:Place a owl:Class ;
-    rdfs:label "Place" .
+<http://purl.org/oscar/ontology#plays>
+  a owl:ObjectProperty ;
+  rdfs:label "plays" ;
+  rdfs:domain foaf:Person ;
+  rdfs:range <http://purl.org/oscar/ontology#Character> .
 
-schema:Event a owl:Class ;
-    rdfs:label "Event" .
+<http://purl.org/oscar/ontology#wasBornIn>
+  a owl:ObjectProperty ;
+  rdfs:label "was born in" ;
+  rdfs:domain foaf:Person ;
+  rdfs:range <http://purl.org/oscar/ontology#Place> .
 
-schema:Movie a owl:Class ;
-    rdfs:label "Movie" .
+skos:broader
+  a owl:ObjectProperty ;
+  rdfs:label "broader" ;
+  rdfs:domain <http://purl.org/oscar/ontology#Category> ;
+  rdfs:range <http://purl.org/oscar/ontology#Nomination> .
 
-oscar:Nomination a owl:Class ;
-    rdfs:label "Nomination" .
+<https://schema.org/nominee>
+  a owl:ObjectProperty ;
+  rdfs:label "nominee" ;
+  rdfs:domain <http://purl.org/oscar/ontology#Nomination> ;
+  rdfs:range foaf:Person .
 
-foaf:Person a owl:Class ;
-    rdfs:label "Person" .
+<http://purl.org/oscar/ontology#bioURL>
+  a owl:DatatypeProperty ;
+  rdfs:domain foaf:Person ;
+  rdfs:range xsd:anyURI .
 
+<http://purl.org/oscar/ontology#categoryName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://purl.org/oscar/ontology#Category> ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#dateOfBirth>
+  a owl:DatatypeProperty ;
+  rdfs:domain foaf:Person ;
+  rdfs:range xsd:date .
+
+<http://purl.org/oscar/ontology#eventName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://schema.org/Event> ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#filmId>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://schema.org/Movie> ;
+  rdfs:range xsd:integer .
+
+<http://purl.org/oscar/ontology#isMultifilm>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://purl.org/oscar/ontology#Nomination> ;
+  rdfs:range xsd:boolean .
+
+<http://purl.org/oscar/ontology#isWinner>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://purl.org/oscar/ontology#Nomination> ;
+  rdfs:range xsd:boolean .
+
+<http://purl.org/oscar/ontology#movieName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://schema.org/Movie> ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#name>
+  a owl:DatatypeProperty ;
+  rdfs:domain foaf:Person ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#nomId>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://purl.org/oscar/ontology#Nomination> ;
+  rdfs:range xsd:integer .
+
+<http://purl.org/oscar/ontology#nominationName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://purl.org/oscar/ontology#Nomination> ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#nomineeIds>
+  a owl:DatatypeProperty ;
+  rdfs:domain foaf:Person ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#placeName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://purl.org/oscar/ontology#Place> ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#raceName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://dbpedia.org/ontology/Race> ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#religionName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://dbpedia.org/ontology/Religion> ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#sexualOrientationName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://dbpedia.org/ontology/SexualOrientation> ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#stateName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://purl.org/oscar/ontology#State> ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#surname>
+  a owl:DatatypeProperty ;
+  rdfs:domain foaf:Person ;
+  rdfs:range xsd:string .
+
+<http://purl.org/oscar/ontology#year>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://schema.org/Event> ;
+  rdfs:range xsd:integer .
+
+<http://dbpedia.org/ontology/Race>
+  a owl:Class ;
+  rdfs:label "Race" .
+
+<http://dbpedia.org/ontology/Religion>
+  a owl:Class ;
+  rdfs:label "Religion" .
+
+<http://dbpedia.org/ontology/SexualOrientation>
+  a owl:Class ;
+  rdfs:label "Sexual Orientation" .
+
+<http://purl.org/oscar/ontology#State>
+  a owl:Class ;
+  rdfs:label "State" .
+
+<http://purl.org/oscar/ontology#Category>
+  a owl:Class ;
+  rdfs:label "Category" .
+
+<http://purl.org/oscar/ontology#Place>
+  a owl:Class ;
+  rdfs:label "Place" .
+
+<https://schema.org/Event>
+  a owl:Class ;
+  rdfs:label "Event" .
+
+<https://schema.org/Movie>
+  a owl:Class ;
+  rdfs:label "Movie" .
+
+<http://purl.org/oscar/ontology#Nomination>
+  a owl:Class ;
+  rdfs:label "Nomination" .
+
+foaf:Person
+  a owl:Class ;
+  rdfs:label "Person" .
+
+<http://purl.org/oscar/ontology#Character>
+  a owl:Class ;
+  rdfs:label "Character" .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   foaf:Person
+   <https://schema.org/Movie>
+   <https://schema.org/Event>
+   <http://purl.org/oscar/ontology#Nomination>
+   <http://purl.org/oscar/ontology#Category>
+   <http://purl.org/oscar/ontology#Character>
+ ) .
