@@ -1,0 +1,1011 @@
+<h2 id="crossreference" class="list">Cross-reference for Oscars Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Oscars Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Category" title="http://purl.org/oscar/ontology#Category">Category</a>
+      </li>
+      <li>
+         <a href="#Character" title="http://purl.org/oscar/ontology#Character">Character</a>
+      </li>
+      <li>
+         <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a>
+      </li>
+      <li>
+         <a href="#https://schema.org/Movie" title="https://schema.org/Movie">Movie</a>
+      </li>
+      <li>
+         <a href="#Nomination" title="http://purl.org/oscar/ontology#Nomination">Nomination</a>
+      </li>
+      <li>
+         <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+      </li>
+      <li>
+         <a href="#Place" title="http://purl.org/oscar/ontology#Place">Place</a>
+      </li>
+      <li>
+         <a href="#http://dbpedia.org/ontology/Race" title="http://dbpedia.org/ontology/Race">Race</a>
+      </li>
+      <li>
+         <a href="#http://dbpedia.org/ontology/Religion" title="http://dbpedia.org/ontology/Religion">Religion</a>
+      </li>
+      <li>
+         <a href="#http://dbpedia.org/ontology/SexualOrientation" title="http://dbpedia.org/ontology/SexualOrientation">Sexual Orientation</a>
+      </li>
+      <li>
+         <a href="#State" title="http://purl.org/oscar/ontology#State">State</a>
+      </li>
+   </ul>
+   <div class="entity" id="Category">
+      <h3>Category<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#Category</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#categoryName" title="http://purl.org/oscar/ontology#categoryName">category name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#includesCategory" title="http://purl.org/oscar/ontology#includesCategory">includes category</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Character">
+      <h3>Character<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#Character</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#appearsIn" title="http://purl.org/oscar/ontology#appearsIn">appears in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#characterName" title="http://purl.org/oscar/ontology#characterName">character name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#actedIn" title="http://purl.org/oscar/ontology#actedIn">acted in</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://schema.org/Event">
+      <h3>Event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://schema.org/Event</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#eventName" title="http://purl.org/oscar/ontology#eventName">event name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#includesCategory" title="http://purl.org/oscar/ontology#includesCategory">includes category</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#year" title="http://purl.org/oscar/ontology#year">year</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#happenedAt" title="http://purl.org/oscar/ontology#happenedAt">happened at</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://schema.org/Movie">
+      <h3>Movie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://schema.org/Movie</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#filmId" title="http://purl.org/oscar/ontology#filmId">film id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#movieName" title="http://purl.org/oscar/ontology#movieName">movie name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#appearsIn" title="http://purl.org/oscar/ontology#appearsIn">appears in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isNominatedForMovie"
+               title="http://purl.org/oscar/ontology#isNominatedForMovie">is nominated for movie</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Nomination">
+      <h3>Nomination<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#Nomination</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#happenedAt" title="http://purl.org/oscar/ontology#happenedAt">happened at</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasNominee" title="http://purl.org/oscar/ontology#hasNominee">has nominee</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isMultifilm" title="http://purl.org/oscar/ontology#isMultifilm">is multifilm</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isNominatedForMovie"
+               title="http://purl.org/oscar/ontology#isNominatedForMovie">is nominated for movie</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isWinner" title="http://purl.org/oscar/ontology#isWinner">is winner</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nomId" title="http://purl.org/oscar/ontology#nomId">nom id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nominationName" title="http://purl.org/oscar/ontology#nominationName">nomination name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/Person">
+      <h3>Person<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/Person</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#actedIn" title="http://purl.org/oscar/ontology#actedIn">acted in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#bioURL" title="http://purl.org/oscar/ontology#bioURL">bio u r l</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#dateOfBirth" title="http://purl.org/oscar/ontology#dateOfBirth">date of birth</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEthnicity" title="http://purl.org/oscar/ontology#hasEthnicity">has ethnicity</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasReligion" title="http://purl.org/oscar/ontology#hasReligion">has religion</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSexualOrientation"
+               title="http://purl.org/oscar/ontology#hasSexualOrientation">has sexual orientation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#name" title="http://purl.org/oscar/ontology#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nomineeIds" title="http://purl.org/oscar/ontology#nomineeIds">nominee ids</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#surname" title="http://purl.org/oscar/ontology#surname">surname</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#wasBornIn" title="http://purl.org/oscar/ontology#wasBornIn">was born in</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasNominee" title="http://purl.org/oscar/ontology#hasNominee">has nominee</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Place">
+      <h3>Place<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#Place</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isPartOfState" title="http://purl.org/oscar/ontology#isPartOfState">is part of state</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#placeName" title="http://purl.org/oscar/ontology#placeName">place name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#wasBornIn" title="http://purl.org/oscar/ontology#wasBornIn">was born in</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://dbpedia.org/ontology/Race">
+      <h3>Race<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dbpedia.org/ontology/Race</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#raceName" title="http://purl.org/oscar/ontology#raceName">race name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasEthnicity" title="http://purl.org/oscar/ontology#hasEthnicity">has ethnicity</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://dbpedia.org/ontology/Religion">
+      <h3>Religion<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dbpedia.org/ontology/Religion</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#religionName" title="http://purl.org/oscar/ontology#religionName">religion name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasReligion" title="http://purl.org/oscar/ontology#hasReligion">has religion</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://dbpedia.org/ontology/SexualOrientation">
+      <h3>Sexual Orientation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dbpedia.org/ontology/SexualOrientation</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#sexualOrientationName"
+               title="http://purl.org/oscar/ontology#sexualOrientationName">sexual orientation name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSexualOrientation"
+               title="http://purl.org/oscar/ontology#hasSexualOrientation">has sexual orientation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="State">
+      <h3>State<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#State</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#stateName" title="http://purl.org/oscar/ontology#stateName">state name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isPartOfState" title="http://purl.org/oscar/ontology#isPartOfState">is part of state</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#actedIn" title="http://purl.org/oscar/ontology#actedIn">acted in</a>
+      </li>
+      <li>
+         <a href="#appearsIn" title="http://purl.org/oscar/ontology#appearsIn">appears in</a>
+      </li>
+      <li>
+         <a href="#happenedAt" title="http://purl.org/oscar/ontology#happenedAt">happened at</a>
+      </li>
+      <li>
+         <a href="#hasEthnicity" title="http://purl.org/oscar/ontology#hasEthnicity">has ethnicity</a>
+      </li>
+      <li>
+         <a href="#hasNominee" title="http://purl.org/oscar/ontology#hasNominee">has nominee</a>
+      </li>
+      <li>
+         <a href="#hasReligion" title="http://purl.org/oscar/ontology#hasReligion">has religion</a>
+      </li>
+      <li>
+         <a href="#hasSexualOrientation"
+            title="http://purl.org/oscar/ontology#hasSexualOrientation">has sexual orientation</a>
+      </li>
+      <li>
+         <a href="#includesCategory" title="http://purl.org/oscar/ontology#includesCategory">includes category</a>
+      </li>
+      <li>
+         <a href="#isNominatedForMovie"
+            title="http://purl.org/oscar/ontology#isNominatedForMovie">is nominated for movie</a>
+      </li>
+      <li>
+         <a href="#isPartOfState" title="http://purl.org/oscar/ontology#isPartOfState">is part of state</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a>
+      </li>
+      <li>
+         <a href="#wasBornIn" title="http://purl.org/oscar/ontology#wasBornIn">was born in</a>
+      </li>
+   </ul>
+   <div class="entity" id="actedIn">
+      <h3>acted in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#actedIn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Character" title="http://purl.org/oscar/ontology#Character">Character</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="appearsIn">
+      <h3>appears in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#appearsIn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Character" title="http://purl.org/oscar/ontology#Character">Character</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://schema.org/Movie" title="https://schema.org/Movie">Movie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="happenedAt">
+      <h3>happened at<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#happenedAt</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Nomination" title="http://purl.org/oscar/ontology#Nomination">Nomination</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasEthnicity">
+      <h3>has ethnicity<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#hasEthnicity</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://dbpedia.org/ontology/Race" title="http://dbpedia.org/ontology/Race">Race</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasNominee">
+      <h3>has nominee<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#hasNominee</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Nomination" title="http://purl.org/oscar/ontology#Nomination">Nomination</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasReligion">
+      <h3>has religion<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#hasReligion</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://dbpedia.org/ontology/Religion" title="http://dbpedia.org/ontology/Religion">Religion</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSexualOrientation">
+      <h3>has sexual orientation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#hasSexualOrientation</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://dbpedia.org/ontology/SexualOrientation" title="http://dbpedia.org/ontology/SexualOrientation">Sexual Orientation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="includesCategory">
+      <h3>includes category<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#includesCategory</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Category" title="http://purl.org/oscar/ontology#Category">Category</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isNominatedForMovie">
+      <h3>is nominated for movie<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#isNominatedForMovie</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Nomination" title="http://purl.org/oscar/ontology#Nomination">Nomination</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://schema.org/Movie" title="https://schema.org/Movie">Movie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPartOfState">
+      <h3>is part of state<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#isPartOfState</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Place" title="http://purl.org/oscar/ontology#Place">Place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#State" title="http://purl.org/oscar/ontology#State">State</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#narrower">
+      <h3>narrower<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#narrower</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Category" title="http://purl.org/oscar/ontology#Category">Category</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Nomination" title="http://purl.org/oscar/ontology#Nomination">Nomination</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="wasBornIn">
+      <h3>was born in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#wasBornIn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Place" title="http://purl.org/oscar/ontology#Place">Place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#bioURL" title="http://purl.org/oscar/ontology#bioURL">bio u r l</a>
+      </li>
+      <li>
+         <a href="#categoryName" title="http://purl.org/oscar/ontology#categoryName">category name</a>
+      </li>
+      <li>
+         <a href="#characterName" title="http://purl.org/oscar/ontology#characterName">character name</a>
+      </li>
+      <li>
+         <a href="#dateOfBirth" title="http://purl.org/oscar/ontology#dateOfBirth">date of birth</a>
+      </li>
+      <li>
+         <a href="#eventName" title="http://purl.org/oscar/ontology#eventName">event name</a>
+      </li>
+      <li>
+         <a href="#filmId" title="http://purl.org/oscar/ontology#filmId">film id</a>
+      </li>
+      <li>
+         <a href="#isMultifilm" title="http://purl.org/oscar/ontology#isMultifilm">is multifilm</a>
+      </li>
+      <li>
+         <a href="#isWinner" title="http://purl.org/oscar/ontology#isWinner">is winner</a>
+      </li>
+      <li>
+         <a href="#movieName" title="http://purl.org/oscar/ontology#movieName">movie name</a>
+      </li>
+      <li>
+         <a href="#name" title="http://purl.org/oscar/ontology#name">name</a>
+      </li>
+      <li>
+         <a href="#nomId" title="http://purl.org/oscar/ontology#nomId">nom id</a>
+      </li>
+      <li>
+         <a href="#nominationName" title="http://purl.org/oscar/ontology#nominationName">nomination name</a>
+      </li>
+      <li>
+         <a href="#nomineeIds" title="http://purl.org/oscar/ontology#nomineeIds">nominee ids</a>
+      </li>
+      <li>
+         <a href="#placeName" title="http://purl.org/oscar/ontology#placeName">place name</a>
+      </li>
+      <li>
+         <a href="#raceName" title="http://purl.org/oscar/ontology#raceName">race name</a>
+      </li>
+      <li>
+         <a href="#religionName" title="http://purl.org/oscar/ontology#religionName">religion name</a>
+      </li>
+      <li>
+         <a href="#sexualOrientationName"
+            title="http://purl.org/oscar/ontology#sexualOrientationName">sexual orientation name</a>
+      </li>
+      <li>
+         <a href="#stateName" title="http://purl.org/oscar/ontology#stateName">state name</a>
+      </li>
+      <li>
+         <a href="#surname" title="http://purl.org/oscar/ontology#surname">surname</a>
+      </li>
+      <li>
+         <a href="#year" title="http://purl.org/oscar/ontology#year">year</a>
+      </li>
+   </ul>
+   <div class="entity" id="bioURL">
+      <h3>bio u r l<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#bioURL</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="categoryName">
+      <h3>category name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#categoryName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Category" title="http://purl.org/oscar/ontology#Category">Category</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="characterName">
+      <h3>character name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#characterName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Character" title="http://purl.org/oscar/ontology#Character">Character</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="dateOfBirth">
+      <h3>date of birth<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#dateOfBirth</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="eventName">
+      <h3>event name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#eventName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="filmId">
+      <h3>film id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#filmId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://schema.org/Movie" title="https://schema.org/Movie">Movie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isMultifilm">
+      <h3>is multifilm<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#isMultifilm</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Nomination" title="http://purl.org/oscar/ontology#Nomination">Nomination</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isWinner">
+      <h3>is winner<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#isWinner</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Nomination" title="http://purl.org/oscar/ontology#Nomination">Nomination</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="movieName">
+      <h3>movie name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#movieName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://schema.org/Movie" title="https://schema.org/Movie">Movie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#name</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nomId">
+      <h3>nom id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#nomId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Nomination" title="http://purl.org/oscar/ontology#Nomination">Nomination</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nominationName">
+      <h3>nomination name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#nominationName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Nomination" title="http://purl.org/oscar/ontology#Nomination">Nomination</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nomineeIds">
+      <h3>nominee ids<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#nomineeIds</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="placeName">
+      <h3>place name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#placeName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Place" title="http://purl.org/oscar/ontology#Place">Place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="raceName">
+      <h3>race name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#raceName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://dbpedia.org/ontology/Race" title="http://dbpedia.org/ontology/Race">Race</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="religionName">
+      <h3>religion name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#religionName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://dbpedia.org/ontology/Religion" title="http://dbpedia.org/ontology/Religion">Religion</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="sexualOrientationName">
+      <h3>sexual orientation name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#sexualOrientationName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://dbpedia.org/ontology/SexualOrientation" title="http://dbpedia.org/ontology/SexualOrientation">Sexual Orientation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="stateName">
+      <h3>state name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#stateName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#State" title="http://purl.org/oscar/ontology#State">State</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="surname">
+      <h3>surname<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#surname</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="year">
+      <h3>year<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/oscar/ontology#year</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>

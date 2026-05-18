@@ -1,0 +1,49 @@
+{
+  "@context" : {
+    "ceremonyNumber" : {
+      "@id" : "http://purl.org/oscar/ontology#ceremonyNumber"
+    },
+    "race" : {
+      "@id" : "http://dbpedia.org/ontology/race"
+    },
+    "Character" : {
+      "@id" : "http://purl.org/oscar/ontology#Character"
+    },
+    "Event" : {
+      "@id" : "https://schema.org/Event"
+    },
+    "Person" : {
+      "@id" : "https://schema.org/Person"
+    },
+    "weapon" : {
+      "@id" : "http://purl.org/oscar/ontology#weapon"
+    },
+    "name" : {
+      "@id" : "https://schema.org/name"
+    },
+    "Nomination" : {
+      "@id" : "http://purl.org/oscar/ontology#Nomination"
+    },
+    "isWinner" : {
+      "@id" : "http://purl.org/oscar/ontology#isWinner"
+    },
+    "Movie" : {
+      "@id" : "https://schema.org/Movie"
+    },
+    "year" : {
+      "@id" : "http://purl.org/oscar/ontology#year"
+    },
+    "isNominatedforMovie" : {
+      "@id" : "http://purl.org/oscar/ontology#isNominatedforMovie"
+    },
+    "nominee" : {
+      "@id" : "https://schema.org/nominee"
+    },
+    "religion" : {
+      "@id" : "http://dbpedia.org/ontology/religion"
+    },
+    "sexualOrientation" : {
+      "@id" : "http://dbpedia.org/ontology/sexualOrientation"
+    }
+  }
+}

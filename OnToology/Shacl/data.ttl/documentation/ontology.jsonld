@@ -1,0 +1,171 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://dbpedia.org/ontology/race",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://dbpedia.org/ontology/religion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://dbpedia.org/ontology/sexualOrientation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://example.org/data/BadCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/oscar/ontology#weapon" : [ {
+    "@value" : "Batarang"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/oscar/ontology#Character"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "Batman"
+  } ]
+}, {
+  "@id" : "http://example.org/data/BadEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/oscar/ontology#ceremonyNumber" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ],
+  "http://purl.org/oscar/ontology#year" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1920"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Event"
+  } ]
+}, {
+  "@id" : "http://example.org/data/BadNomination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/oscar/ontology#isNominatedforMovie" : [ {
+    "@value" : "Titanic the movie"
+  } ],
+  "http://purl.org/oscar/ontology#isWinner" : [ {
+    "@value" : "Sí, ganó"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/oscar/ontology#Nomination"
+  } ]
+}, {
+  "@id" : "http://example.org/data/BadPerson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://dbpedia.org/ontology/race" : [ {
+    "@value" : "White"
+  } ],
+  "http://dbpedia.org/ontology/religion" : [ {
+    "@value" : "Jedi"
+  } ],
+  "http://dbpedia.org/ontology/sexualOrientation" : [ {
+    "@value" : "Straight"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Person"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : ""
+  } ]
+}, {
+  "@id" : "http://example.org/data/CharacterTramp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/oscar/ontology#Character"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "The Tramp"
+  } ]
+}, {
+  "@id" : "http://example.org/data/CharlesChaplin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://dbpedia.org/ontology/race" : [ {
+    "@value" : "White"
+  } ],
+  "http://dbpedia.org/ontology/religion" : [ {
+    "@value" : "Atheist"
+  } ],
+  "http://dbpedia.org/ontology/sexualOrientation" : [ {
+    "@value" : "Straight"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Person"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "Charles Chaplin"
+  } ]
+}, {
+  "@id" : "http://example.org/data/Nomination1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/oscar/ontology#isNominatedforMovie" : [ {
+    "@id" : "http://example.org/data/TheCircus"
+  } ],
+  "http://purl.org/oscar/ontology#isWinner" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/oscar/ontology#Nomination"
+  } ],
+  "https://schema.org/nominee" : [ {
+    "@id" : "http://example.org/data/CharlesChaplin"
+  } ]
+}, {
+  "@id" : "http://example.org/data/Oscars1928",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/oscar/ontology#ceremonyNumber" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://purl.org/oscar/ontology#year" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1928"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Event"
+  } ]
+}, {
+  "@id" : "http://example.org/data/TheCircus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Movie"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "The Circus"
+  } ]
+}, {
+  "@id" : "http://purl.org/oscar/ontology#Character",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/oscar/ontology#Nomination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/oscar/ontology#ceremonyNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/oscar/ontology#isNominatedforMovie",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/oscar/ontology#isWinner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/oscar/ontology#weapon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/oscar/ontology#year",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Movie",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/nominee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

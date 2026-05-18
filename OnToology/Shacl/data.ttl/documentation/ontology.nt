@@ -1,0 +1,131 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/ontology/race
+<http://dbpedia.org/ontology/race> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://dbpedia.org/ontology/religion
+<http://dbpedia.org/ontology/religion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://dbpedia.org/ontology/sexualOrientation
+<http://dbpedia.org/ontology/sexualOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/oscar/ontology#ceremonyNumber
+<http://purl.org/oscar/ontology#ceremonyNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/oscar/ontology#isNominatedforMovie
+<http://purl.org/oscar/ontology#isNominatedforMovie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/oscar/ontology#isWinner
+<http://purl.org/oscar/ontology#isWinner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/oscar/ontology#weapon
+<http://purl.org/oscar/ontology#weapon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/oscar/ontology#year
+<http://purl.org/oscar/ontology#year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/name
+<https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/nominee
+<https://schema.org/nominee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/oscar/ontology#Character
+<http://purl.org/oscar/ontology#Character> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/oscar/ontology#Nomination
+<http://purl.org/oscar/ontology#Nomination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Event
+<https://schema.org/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Movie
+<https://schema.org/Movie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Person
+<https://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/data/BadCharacter
+<http://example.org/data/BadCharacter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/data/BadCharacter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/oscar/ontology#Character> .
+<http://example.org/data/BadCharacter> <http://purl.org/oscar/ontology#weapon> "Batarang" .
+<http://example.org/data/BadCharacter> <https://schema.org/name> "Batman" .
+# 
+# http://example.org/data/BadEvent
+<http://example.org/data/BadEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/data/BadEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Event> .
+<http://example.org/data/BadEvent> <http://purl.org/oscar/ontology#ceremonyNumber> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/data/BadEvent> <http://purl.org/oscar/ontology#year> "1920"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://example.org/data/BadNomination
+<http://example.org/data/BadNomination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/data/BadNomination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/oscar/ontology#Nomination> .
+<http://example.org/data/BadNomination> <http://purl.org/oscar/ontology#isNominatedforMovie> "Titanic the movie" .
+<http://example.org/data/BadNomination> <http://purl.org/oscar/ontology#isWinner> "Sí, ganó" .
+# 
+# http://example.org/data/BadPerson
+<http://example.org/data/BadPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/data/BadPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://example.org/data/BadPerson> <http://dbpedia.org/ontology/race> "White" .
+<http://example.org/data/BadPerson> <http://dbpedia.org/ontology/religion> "Jedi" .
+<http://example.org/data/BadPerson> <http://dbpedia.org/ontology/sexualOrientation> "Straight" .
+<http://example.org/data/BadPerson> <https://schema.org/name> "" .
+# 
+# http://example.org/data/CharacterTramp
+<http://example.org/data/CharacterTramp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/data/CharacterTramp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/oscar/ontology#Character> .
+<http://example.org/data/CharacterTramp> <https://schema.org/name> "The Tramp" .
+# 
+# http://example.org/data/CharlesChaplin
+<http://example.org/data/CharlesChaplin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/data/CharlesChaplin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://example.org/data/CharlesChaplin> <http://dbpedia.org/ontology/race> "White" .
+<http://example.org/data/CharlesChaplin> <http://dbpedia.org/ontology/religion> "Atheist" .
+<http://example.org/data/CharlesChaplin> <http://dbpedia.org/ontology/sexualOrientation> "Straight" .
+<http://example.org/data/CharlesChaplin> <https://schema.org/name> "Charles Chaplin" .
+# 
+# http://example.org/data/Nomination1
+<http://example.org/data/Nomination1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/data/Nomination1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/oscar/ontology#Nomination> .
+<http://example.org/data/Nomination1> <http://purl.org/oscar/ontology#isNominatedforMovie> <http://example.org/data/TheCircus> .
+<http://example.org/data/Nomination1> <http://purl.org/oscar/ontology#isWinner> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/data/Nomination1> <https://schema.org/nominee> <http://example.org/data/CharlesChaplin> .
+# 
+# http://example.org/data/Oscars1928
+<http://example.org/data/Oscars1928> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/data/Oscars1928> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Event> .
+<http://example.org/data/Oscars1928> <http://purl.org/oscar/ontology#ceremonyNumber> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/data/Oscars1928> <http://purl.org/oscar/ontology#year> "1928"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://example.org/data/TheCircus
+<http://example.org/data/TheCircus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/data/TheCircus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Movie> .
+<http://example.org/data/TheCircus> <https://schema.org/name> "The Circus" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
